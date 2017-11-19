@@ -1,0 +1,297 @@
+// Hero wrapper
+.post-intro {
+  position: absolute;
+  top: calc(50%);
+  width: 100%;
+  left: 0;
+  text-align: center;
+  transform: translate(0%, -50%);
+  will-change: transform;
+  // transition: transform 1.25s 0s cubic-bezier(0.3,0.58,0.42,0.9);
+  z-index: 3;
+  // RESET Parallax
+  @include breakpoint($xs $lg) {
+    opacity: 1!important;
+  }
+  h1 {
+    color: #fff;
+    padding: 0.5em 0;
+    @include breakpoint($lg) {
+      font-size: 3.9rem;
+    }
+  }
+}
+//post test
+.post-test {
+  padding: 58px 0px 0px 0px;
+  @include breakpoint($lg) {
+    padding: 0;
+  }
+  article {
+    color: rgba(0,0,0,.8);
+    line-height: 1.9;
+    .post-hero-wrap {
+      position: relative;
+      height: $hero-height;
+      overflow: hidden;
+      @include breakpoint($md) {
+        height: 340px;
+      }
+      @include breakpoint($lg) {
+        height: 550px;
+      }
+    }
+    .post-bg-image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: #27282a;
+      // RESET Parallax
+      @include breakpoint($xs $lg) {
+        transform: translate(0px)!important;
+        visibility: visible!important;
+        display: block!important;
+      }
+      @include breakpoint($lg) {
+      position: fixed;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        content:'';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #252b33;
+        opacity: .65;
+        z-index: 1;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    background-color: $bg-color;
+  }
+}
+
+article {
+  color: rgba(0,0,0,.8);
+  line-height: 1.9;
+  .post-hero {
+    position: relative;
+    height: $hero-height;
+    overflow: hidden;
+    @include breakpoint($md) {
+      height: 340px;
+    }
+    @include breakpoint($lg) {
+      height: 550px;
+    }
+    @include clearfix;
+    .post-bg-image {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: #27282a;
+      background-attachment: fixed;
+      &:after {
+        content:'';
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #252b33;
+        opacity: .65;
+        z-index: 1;
+      }
+    }
+    h1.title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 0 25px 35px 25px;
+      @include breakpoint($md) {
+        font-size: 1.75rem;
+      }
+      @include breakpoint($lg) {
+        font-size: 1.9rem;
+        margin: 0 0px 35px 0px;
+      }
+    }
+  }
+  .post-meta {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+    span {
+      margin-right: 5px;
+      &:after {
+        content:  '\007C';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+  svg {
+    width: 15px;
+    height: auto;
+  }
+  img {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  figure {
+    img {
+      margin: 0 auto;
+    }
+    figcaption {
+      margin: 10px 0 0 0;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+  .share > a {
+    border-radius: 100px;
+    line-height: 1;
+    text-align: center;
+    border: 2px solid;
+    padding: 9px 30px;
+    margin: 10px 13px 10px 0;
+    height: auto;
+    display: inline-block;
+    svg {
+      transition: all 0.3s ease;
+    }
+  }
+  .share {
+    .facebook {
+      border-color: #3b5998;
+      color: #3b5998;
+      transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+      svg {
+        fill: #3b5998;
+      }
+      &:hover {
+        background-color: #3b5998;
+        color: $bg-color;
+      }
+    }
+    .twitter {
+      border-color: #55acee;
+      color: #55acee;
+      transition: all 0.2s ease;
+      svg {
+        fill: #55acee;
+      }
+      &:hover {
+        background-color: #55acee;
+        color: $bg-color;
+      }
+    }
+    .google-plus {
+      border-color: #dd4b39;
+      color: #dd4b39;
+      transition: all 0.2s ease;
+      svg {
+        fill: #dd4b39;
+      }
+      &:hover {
+        background-color: #dd4b39;
+        color: $bg-color;
+      }
+    }
+    .linkedin {
+      border-color: #007bb5;
+      color: #007bb5;
+      transition: all 0.2s ease;
+      svg {
+        fill: #007bb5;
+      }
+      &:hover {
+        background-color: #007bb5;
+        color: $bg-color;
+      }
+    }
+    .pinterest {
+      border-color: #cb2027;
+      color: #cb2027;
+      transition: all 0.2s ease;
+      svg {
+        fill: #cb2027;
+      }
+      &:hover {
+        background-color: #cb2027;
+        color: $bg-color;
+      }
+    }
+  }
+}
+.facebook:hover svg path,
+.facebook:hover, .twitter:hover svg path,
+.twitter:hover, .google-plus:hover svg path,
+.google-plus:hover, .linkedin:hover svg path,
+.linkedin:hover,.pinterest:hover svg path,
+.pinterest:hover{
+  fill:$bg-color;
+  color:$bg-color;
+}
+
+.controls {
+  padding: 40px 0;
+  background-color: #eee;
+  .control {
+    @include gallery(4);
+    &:nth-child(2n) {
+      text-align: center;
+    }
+    &:nth-child(3n) {
+      text-align: right;
+      @include last;
+    }
+    a {
+      color: #6D6D6D;
+      &:hover {
+        color: #222325;
+      }
+    }
+  }
+}
+.home {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 30px;
+  height: 30px;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: auto;
+    fill:#6D6D6D;
+  }
+  &:hover {
+    svg {
+      fill: #222325;
+    }
+  }
+}
+.comments {
+  padding: 50px 0px 50px;
+  background-color: #fafafa;
+}

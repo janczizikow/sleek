@@ -1,0 +1,123 @@
+.pre-contact {
+  margin-bottom: 40px;
+}
+label {
+  font-weight: 300;
+}
+.input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 35px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $primary;
+    z-index:5;
+    transition: width .45s cubic-bezier(.694,.048,.335,1);
+    transition-delay: .1s;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff6161;
+    z-index:4;
+    transition: width .45s cubic-bezier(.694,.048,.335,1);
+  }
+  &:hover:after, :focus:after, :active:after {
+    width:100%;
+  }
+  &:hover:before, :focus:before, :active:after {
+    width: 100%;
+  }
+  &:nth-child(3n) {
+    &:before, &:after {
+      bottom: 6px;
+    }
+  }
+  &.error {
+    &:hover:after, :focus:after, :active:after {
+      width: 0%;
+    }
+    &:hover:before, :focus:before, :active:after {
+      width: 0%;
+    }
+  }
+}
+
+input {
+  display: inline-block;
+  padding: 5px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #EDEDED;
+  outline: none;
+  font-family: 'Brown', sans-serif;
+  font-weight: 300;
+  background: transparent;
+  &:focus {
+    transition: border-color .25s;
+    border-color:$primary;
+  }
+}
+textarea#message {
+  font-family: 'Brown', sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  padding: 5px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #EDEDED;
+  outline: none;
+  background: transparent;
+  resize: none;
+  &:focus {
+    transition: border-color .25s;
+    border-color:$primary;
+  }
+}
+
+.error {
+  input {
+    border-bottom-color: $error!important;
+  }
+  textarea {
+    border-bottom-color: $error!important;
+  }
+}
+.error-data {
+  color: $error;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+}
+
+#contact {
+  main {
+    padding-right: gutter();
+  }
+  aside {
+    h4 {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    em {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+    .reference {
+      padding-bottom: 30px;
+    }
+  }
+}

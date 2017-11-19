@@ -1,0 +1,22 @@
+.center {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  img {
+    margin-bottom: 50px;
+  }
+}
+
+.showcase {
+  background-color: #F6F6F6;
+}
+
+.project-container {
+    max-width: 960px;
+    margin: 0px auto;
+    display: none;
+    h2 {
+      text-align: center;
+    }
+}

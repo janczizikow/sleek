@@ -1,0 +1,94 @@
+.search-toggle {
+  display: block;
+
+  &::before {
+    background-image: url("/assets/img/search.svg");
+  }
+}
+
+// Algolia stuff
+.aa-input-container {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-left: 1em;
+  padding: 11px 0;
+}
+
+.aa-input-search {
+  width: 0;
+  overflow: hidden;
+  border: 0;
+  color: $text-color;
+  padding: 9px 12px 8px 34px;
+  box-sizing: border-box;
+  transition: all .2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    width: 200px;
+  }
+}
+
+.aa-input-search::-webkit-search-decoration,
+.aa-input-search::-webkit-search-cancel-button,
+.aa-input-search::-webkit-search-results-button,
+.aa-input-search::-webkit-search-results-decoration {
+  display: none;
+}
+
+.aa-input-icon {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  fill: $text-color;
+}
+
+.aa-dropdown-menu {
+  color: $text-color;
+  background-color: $bg-color;
+  border: 1px solid #e0e0e0;
+  min-width: 200px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 999;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    margin-left: -7px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: $bg-color;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    transform: rotate(45deg) translate(6px,6px);
+  }
+}
+
+.aa-suggestion {
+  padding: 12px;
+  cursor: pointer;
+  z-index: 999;
+
+  + .aa-suggestion {
+    border-top: 1px solid #dfe2e5;
+  }
+}
+
+.aa-suggestion:hover, .aa-suggestion.aa-cursor {
+  background-color: rgba(241, 241, 241, 0.35);
+}
+
+.algolia__result-highlight {
+  background-color: $primary;
+  background-color: rgba(39,124,234,0.2);
+}

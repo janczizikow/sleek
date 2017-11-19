@@ -1,0 +1,65 @@
+.to-top {
+  position: fixed;
+  display: block;
+  text-align: center;
+  right: 15px;
+  bottom: 0;
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  background-color: rgba(103, 103, 103, 0.65);
+  z-index: 2;
+  transform: translate3d(0, 60px, 0);
+  transition: all 0.3s ease;
+
+  @include breakpoint($md) {
+    right: 1.8em;
+  }
+
+  &.js-show {
+    transform: translate3d(0, -15px, 0);
+
+    @include breakpoint($md) {
+      transform: translate3d(0, -28px, 0);
+    }
+  }
+
+  &:hover {
+    background-color: rgba(103, 103, 103, 0.80);
+  }
+  // &:after {
+  //   content: '';
+  //   positon: absolute;
+  //   display: block;
+  //   top: 0;
+  //   left: 0;
+  //   width: 35px;
+  //   height: 35px;
+  //   opacity: 0;
+  //   background-color: $primary;
+  //   transform: scale(0,0);
+  //   transition: all 0.3s cubic-bezier(.55,0,.1,1);
+  // }
+  // &:hover {
+  //   &:after {
+  //     opacity: 1;
+  //     transform: scale(1,1);
+  //   }
+  // }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10.5px;
+    height: auto;
+    z-index: 3;
+
+    .st1 {
+      stroke: $bg-color;
+      stroke-width:2;
+      stroke-linecap:round;
+      stroke-miterlimit:10;
+    }
+  }
+}

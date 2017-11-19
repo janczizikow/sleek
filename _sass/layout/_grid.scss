@@ -1,0 +1,232 @@
+$susy: (
+  columns: 4,
+  global-box-sizing: border-box,
+  // debug: (image: show)
+);
+
+// Container
+.container {
+  padding: 0px 15px;
+  @include breakpoint($xs) {
+    @include container(auto);
+  }
+  @include breakpoint($sm) {
+    @include container(540px);
+  }
+  @include breakpoint($md) {
+    @include container(720px);
+    @include show-grid(8);
+  }
+  @include breakpoint($lg) {
+    @include container(960px);
+    @include show-grid(12);
+  }
+  @include breakpoint($xl) {
+    @include container(1170px);
+    @include show-grid(12);
+  }
+}
+
+section {
+  padding: 80px 0 60px;
+  &#skills {
+    padding: 100px 0 0;
+  }
+  &#contact {
+    padding: 100px 0;
+  }
+}
+
+#hero {
+  .effect {
+    font-size: 1.9rem;
+    @include breakpoint($md) {
+      font-size: 3.1rem!important;
+    }
+    @include breakpoint($lg) {
+      font-size: 3.9rem!important;
+    }
+  }
+  .lead {
+    font-size: 1rem;
+    padding: 0 15%;
+    span {
+      display: block;
+    }
+    @include breakpoint($md) {
+      font-size: 1.1rem!important;
+    }
+    @include breakpoint($lg) {
+      font-size: 1.2rem!important;
+    }
+  }
+}
+// About
+#about {
+  @include clearfix;
+  .about-left {
+    @include breakpoint($xs) {
+      @include span(full);
+    }
+    @include breakpoint($sm) {
+      text-align: center;
+      @include span(full);
+    }
+    @include susy-breakpoint($md, 8) {
+      text-align: left;
+      @include span(5);
+    }
+    @include breakpoint($lg) {
+      @include span(8 of 12);
+    }
+    @include breakpoint($xl) {
+      @include span(8 of 12);
+    }
+  }
+  .about-right {
+    @include breakpoint($xs) {
+      @include span(full);
+      padding: 0 span(3 of 10);
+      img {
+        padding: 0px 19.5px;
+      }
+    }
+    @include breakpoint($sm) {
+      @include span(full);
+      padding: 0 span(4 of 12);
+
+    }
+    @include susy-breakpoint($md, 8) {
+      @include span(2 last);
+      padding: 0 0;
+      img {
+        padding: 0px 17.5px;
+      }
+    }
+    @include breakpoint($lg) {
+      @include span(4 of 12 last);
+      padding: 0 span(1 wide of 12);
+      img {
+        padding: 0px;
+      }
+    }
+    @include breakpoint($xl) {
+      @include span(4 of 12 last);
+      padding: 0 span(1 wide of 12);
+    }
+  }
+}
+
+// SKILLS
+#skills {
+  .skills {
+    @include breakpoint($xs) {
+      @include span(full);
+    }
+    @include breakpoint($sm) {
+      @include gallery(6 of 12);
+    }
+    @include susy-breakpoint($md, 8) {
+      @include gallery(4);
+    }
+    @include breakpoint($lg) {
+      @include gallery(6 of 12);
+    }
+    @include breakpoint($lg) {
+      @include gallery(3 of 12);
+    }
+  }
+}
+// PROJECTS
+#projects {
+  margin-top: span(1 wide of 12);
+  ul {
+    padding-left: 0;
+    list-style: none;
+    @include clearfix;
+    li {
+      @include breakpoint($xs) {
+        @include span (full);
+        margin-bottom: gutter();
+      }
+      @include susy-breakpoint($md, 8) {
+        @include gallery (4);
+        margin-bottom: gutter();
+      }
+      @include susy-breakpoint($lg, 12) {
+        @include gallery (4);
+        margin-bottom: gutter();
+      }
+    }
+  }
+}
+
+
+// CONTACT
+#contact {
+  .contact-left {
+    @include clearfix;
+    @include breakpoint($xs) {
+      @include span (full);
+      margin-bottom: 50px;
+    }
+    @include susy-breakpoint($md, 8) {
+      @include span (5);
+      margin-bottom: 0;
+    }
+    @include breakpoint($lg) {
+      @include span (8 of 12);
+        .half {
+        @include span (4 of 8);
+        &:nth-child(2n) {
+          @include last;
+        }
+        .full {
+          @include full;
+        }
+      }
+    }
+    @include breakpoint($xl) {
+      @include span (8 of 12);
+    }
+  }
+  .contact-right {
+    @include breakpoint($xs) {
+      @include span (full);
+    }
+    @include susy-breakpoint($md, 8) {
+      @include span (3 last);
+    }
+    @include breakpoint($lg) {
+      @include span (4 of 12 last);
+    }
+    @include breakpoint($xl) {
+      @include last;
+    }
+  }
+}
+
+// ARTICLE
+.post {
+  @include clearfix;
+}
+.post-content {
+  padding: 52px 0;
+  @include breakpoint($xs) {
+    @include span(full);
+  }
+  @include breakpoint($lg) {
+    @include span(8 of 12);
+    margin-left: span(2 wide of 12);
+  }
+}
+
+.controls-wrap, .comments-wrap{
+  @include breakpoint($xs) {
+    @include span(full);
+  }
+  @include breakpoint($lg) {
+    @include span(8 of 12);
+    margin-left: span(2 wide of 12);
+  }
+}

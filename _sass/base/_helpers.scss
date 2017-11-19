@@ -1,0 +1,77 @@
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+img::selection {
+  background: transparent
+}
+
+.title {
+  position: relative;
+  margin: 0 0 85px 0;
+  text-align: center;
+  text-transform: capitalize;
+  &:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 50px;
+    height: 2px;
+    background-color: $primary;
+  }
+}
+//svg fix
+.st0{
+  fill:#1D1D1B;
+}
+
+.not-active {
+  color: #777;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.lock {
+  height: 100%!important;
+}
+.no-scroll {
+  overflow-y: scroll!important;
+  overflow: hidden!important;
+  height: 100%!important;
+}
+
+.lock #header {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.alert {
+  position: fixed;
+  bottom: 0;
+  display: block;
+  padding: 15px;
+  color: #a94442;
+  font-size: 13px;
+  background-color: $error;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  cursor: pointer;
+  .close {
+    position: relative;
+    float: right;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,17 @@
+#freelance {
+  background-color: $primary;
+  color: $bg-color;
+  padding: 60px 0px;
+  .title {
+    color: $bg-color;
+    margin-bottom: 50px;
+  }
+  .btn {
+    background-color: #88d68f;
+    font-weight: 400;
+    color: $bg-color;
+    &:hover, :focus, :active {
+      background-color: #77c29d;
+    }
+  }
+}
