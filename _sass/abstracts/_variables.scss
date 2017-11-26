@@ -1,34 +1,29 @@
 $primary: #277cea;
-$primary-test: #277cea;
+$secondary: #ff6161;
+$border: #ededed;
 $primary-light: #68a4f1;
 $reverse: #3c3d41;
-$secondary-color: #ff561e;
 $sucess: #8fd896;
 $error: #ff6161;
-$yellow: #f6d63d;
-$purple: #6b3de4;
-$green-cta: #88d68f;
+
 $bg-color: #fff;
 $light-bg-color: #f9f9f9;
-$grey-e: #eee;
-$text-color: #676767;
+$text-color: #343851;
 $heading-color: #313237;
-$link-color: #277cea;
-$footer-link-color: rgba(33, 33, 33, 0.6);
+$link-color: $primary;
 $button-dark: #222325;
 $dark-light: #313237;
 $outline: #dbdbdb;
 $grey: #838c8d;
-$border: #f0f0f0;
+
+
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 // Breakpoints
 $xs: 0;
-$sm:576px;
-$md:768px;
-$lg:992px;
-$xl:1200px;
-
-//Hero height
-$hero-height: 260px;
+$sm: 36em; //576px
+$md: 48em; //768px
+$lg: 62em; //992px
+$xl: 75em; //1200px
 
 // Code
 $code-bg-color: #f3f6fa !default;
@@ -36,5 +31,4 @@ $code-text-color: #567482 !default;
 
 // Borders
 $border-color: #dce6f0 !default;
-$table-border-color: #e9ebec !default;
 $hr-border-color: #eff0f1 !default;

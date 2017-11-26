@@ -1,0 +1,38 @@
+.post-card {
+  display: block;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: $bg-color;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 5.26316%;
+
+  @include breakpoint($md) {
+    width: 48.4375%;
+    margin-right: 3.125%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint($xl) {
+    width: 31.25%;
+    margin-right: 3.125%;
+
+    &:nth-child(2n+2) {
+      margin-right: 3.125%;
+    }
+
+    &:last-of-type,
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+}
+
+.post-card--inner {
+  padding: 1.875rem 1.25rem;
+}

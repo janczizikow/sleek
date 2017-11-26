@@ -1,5 +1,55 @@
 ---
-layout: default
+layout: post
 ---
+<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
-{{ content }}
+  {% include head.html %}
+
+  <body class="site">
+
+    {% include header.html %}
+
+    <main class="site__content">
+      <div class="container">
+        <article class="post-content">
+
+          {{ content }}
+
+        </article>
+      </div>
+      <div class="controls">
+        <div class="container">
+          <div class="post-content">
+            <div class="control">
+              {% if page.previous.url %}
+                <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+              {% endif %}
+            </div>
+
+            <div class="control">
+              {% if page.next.url %}
+                <a class="next" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <div class="container">
+          <div class="post-content">
+
+            {% if site.disqus.shortname %}
+
+              {% include disqus.html %}
+
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

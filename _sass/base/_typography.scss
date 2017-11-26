@@ -1,40 +1,32 @@
 // General
 body {
   background-color: $bg-color;
-  font-family: "Helvetica","Arial", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",Roboto,"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   line-height: 1.5;
-  @include text-font;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
-.fonts-loaded body {
-  font-family: 'Brown',"Helvetica","Arial", sans-serif;
-}
-
 
 ::selection {
-  color: #fff;
+  color: $bg-color;
   background-color: #414141;
 }
 
-hr {
-  color: $heading-color;
-  margin-top: 30px;
-  background-color: $heading-color;
-  height: 1px;
-  width: 106px;
-  border: 0;
-}
 // Reboot
 p {
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
+
 // Typography
-h1, h2, h3, h4, h5, h6 {
-  @include heading-font;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $heading-color;
   margin-top: 0;
   margin-bottom: .5rem;
@@ -42,17 +34,17 @@ h1, h2, h3, h4, h5, h6 {
 
 //reset link
 a {
-  color: inherit;
-  &:active, :focus {
-    outline: 0;
-  }
-}
-
-a {
   color: $link-color;
   text-decoration: none;
   transition: color .2s linear;
-  &:hover, :focus {
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
     color: $primary-light;
   }
 }
@@ -62,8 +54,9 @@ a.link {
   display: inline-block;
   color: $link-color;
   transition: color 0.2s linear;
+
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 0;
@@ -109,6 +102,7 @@ pre {
   padding: 0.8rem;
   margin-top: 0;
   margin-bottom: 1rem;
+  overflow-x: auto;
   font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
   color: $code-text-color;
   word-wrap: normal;

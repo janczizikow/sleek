@@ -12,10 +12,7 @@
   }
 }
 
-@mixin heading-font {
-  font-weight: 400;
+@mixin container($breakpoint) {
+  max-width: $breakpoint;
+  margin: 0 auto;
 }
-
-@mixin text-font {
-  font-weight: 300;
- }

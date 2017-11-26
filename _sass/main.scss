@@ -1,37 +1,38 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 
 // 1. Configuration and helpers
 @import
-  'abstracts/variables',
-  'abstracts/mixins',
-  'abstracts/placeholders';
+  "abstracts/variables",
+  "abstracts/mixins";
 
 // 2. Vendors
 @import
-  'vendor/normalize',
-  'vendor/susy';
+  "vendor/normalize",
+  "vendor/susy";
 
 // 3. Base
 @import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+  "base/base",
+  "base/typography",
+  "base/helpers";
 
 // 4. Layout
 @import
-  'layout/nav',
-  'layout/footer',
-  'layout/grid';
+  "layout/grid",
+  "layout/nav",
+  "layout/footer";
 
 // 5. Components
 @import
-  'components/btn',
-  'components/top',
-  // 'components/autocomplete',
-  'components/table';
-  // 'components/syntax';
+  "components/btn",
+  "components/top",
+  "components/card",
+  "components/form",
+  // "components/autocomplete",
+  "components/table",
+  "components/syntax";
 
 // 6. Page-specific styles
 @import
-  'pages/pages';
+  "pages/page",
+  "pages/post";

@@ -1,5 +1,32 @@
 ---
-layout: default
+layout: page
 ---
+<html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
-{{ content }}
+  {% include head.html %}
+
+  <body class="site">
+
+    {% include header.html %}
+    <div class="hero--small">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ page.title }}</h1>
+      </div>
+    </div>
+    <main class="site__content">
+
+      <div class="container">
+        <div class="page-content">
+
+          {{ content }}
+
+        </div>
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

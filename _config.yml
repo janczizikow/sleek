@@ -1,4 +1,4 @@
-title: Your awesome title
+title: Sleek
 author: GitHub User
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -7,11 +7,24 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 twitter_username: jekyllrb
 github_username:  jekyll
+instagram_username: shanlongjj
+social:
+  name: Your Name
+  links:
+    - https://twitter.com/BenBalter
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/BenBalter
+    - https://plus.google.com/+BenBalter
+    - https://github.com/benbalter
+    - https://keybase.io/benbalter
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
 # - about.html
+
+disqus:
+  shortname: janczizikow
 
 # Build settings
 markdown: kramdown
@@ -23,11 +36,12 @@ exclude:
   - package.json
   - Gemfile
   - Gemfile.lock
+  - vendor
 include: ['_pages']
 permalink: /:title/
 
-# gems:
-#   -jekyll-paginate
-
-compress_html:
-  clippings: all
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+# compress_html:
+#   clippings: all

@@ -1,83 +1,31 @@
-//Footer
 footer {
-  font-size: 14px;
-  color: rgba(33,33,33,0.6);
+  padding: 2.8125rem 0;
   border-top: 1px solid #f0f0f0;
-  padding: 60px 0 0;
-  @include breakpoint($sm) {
-        padding: 80px 0;
-  }
-  .widget {
-    margin-bottom: 30px;
-    @include breakpoint($md) {
-      margin-bottom: 0;
-      @include span(4 of 12);
-      &:nth-child(3n) {
-        @include last;
-      }
-    }
-    .legal {
-      ul>li {
-        float: left;
-        margin-right: 1em;
-      }
-      a {
-        font-size: 12px;
-        color: rgba(33,33,33,0.6);
-
-      }
-      &:before, :after {
-        content: " ";
-        display: block;
-        clear: both;
-      }
-    }
-    a {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      color: rgba(33,33,33,0.6);
-      &:after {
-        background: $footer-link-color;
-      }
-      &:hover {
-        color: rgba(33,33,33,1);
-      }
-      &:hover:after, :active:after, :focus:after {
-        color: rgba(33,33,33,1);
-      }
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      .social > li {
-        display: inline-block;
-        margin-right: 1em;
-        @include breakpoint($sm) {
-          display: list-item;
-          margin-right: 0;
-        }
-      }
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(33,33,33,0.6);
+  a {
+    color: rgba(33,33,33,0.6);
+    &:hover {
+      color: $primary;
     }
   }
 }
 
-.go-top {
-  font-size: 40px;
-  position: fixed;
-  bottom: -100vh;
-  right: 5vw;
-  z-index: 2000;
-  color: rgba(0,0,0,.2)!important;
-  padding: 20px;
-  cursor: n-resize;
-  -webkit-transform: translate3D(0,0,0);
-  transform: translate3D(0,0,0);
-  -webkit-transition: 225ms ease all;
-  transition: 225ms ease all;
-  will-change: transition;
-  &.show {
-    bottom: 10vh;
-  }
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 200px;
+  margin: 0 auto 25px;
+}
+
+.social__link:not(:last-child) {
+  margin-right: 1.125rem;
+}
+
+.social__icon {
+    fill: currentColor;
+    height: 1.5rem;
+    width: 1.5rem;
 }
