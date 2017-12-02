@@ -1,14 +1,14 @@
 <a class="post-card" href="{{ post.url | relative_url }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
   {% if post.featured-img %}
-  <div class="post-card__thumb">
+  <figure class="post-card__thumb">
     <img
-      src="/assets/img/posts/{{post.featured-img}}_placehold.jpg",
-      data-srcset="/assets/img/posts/{{post.featured-img}}_thumb.jpg, /assets/img/posts/{{post.featured-img}}_thumb@2x.jpg 2x"
+      src="{{site.url}}/assets/img/posts/{{post.featured-img}}_placehold.jpg",
+      data-srcset="{{site.url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg, {{site.url}}/assets/img/posts/{{post.featured-img}}_thumb@2x.jpg 2x"
       class="lazyload blur-up"
       alt="{{post.title}}"
     />
-    <noscript><img src="/assets/img/posts/{{post.featured-img}}_thumb.jpg" alt="{{ post.title }}"></noscript>
-  </div>
+    <noscript><img src="{{site.url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg" alt="{{ post.title }}"></noscript>
+  </figure>
   {% else %}
   <figure class="post-card__thumb">
     <!-- <img src="./assets/img/shane-rounce-205187.jpg" alt="{{post.title}}"/> -->
