@@ -1,14 +1,15 @@
 {
   "name": "sleek",
   "version": "1.0.0",
-  "description": "Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.",
-  "main": "index.js",
+  "description": "Sleek is a modern Jekyll theme focused on speed performance & SEO best practices.",
+  "main": "gulpfile.js",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "fg-loadcss": "^1.3.1",
+    "jquery": "^3.2.1",
+    "lazysizes": "^4.0.1",
     "normalize.css": "^7.0.0",
-    "picturefill": "^3.0.2",
-    "susy": "^2.2.12"
+    "picturefill": "^3.0.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
@@ -17,21 +18,27 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-responsive": "^2.8.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "sw-precache": "^5.2.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/janczizikow/sleek.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jan Czizikow",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/janczizikow/sleek/issues"
   },

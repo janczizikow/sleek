@@ -8,7 +8,7 @@
 // 2. Vendors
 @import
   "vendor/normalize",
-  "vendor/susy";
+  "vendor/breakpoint";
 
 // 3. Base
 @import
@@ -27,6 +27,7 @@
   "components/btn",
   "components/top",
   "components/card",
+  "components/pagination",
   "components/form",
   // "components/autocomplete",
   "components/table",

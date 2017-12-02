@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
@@ -7,11 +7,40 @@ layout: post
 
   <body class="site">
 
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
     {% include header.html %}
+
+    <div class="hero">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ page.title }}</h1>
+        <p class="hero__meta">
+          <span>
+            <time>{{ page.date | date_to_string }}</time>&nbsp;
+          </span>
+          <span>
+            {% assign words = content | number_of_words %}
+              {% if words < 360 %}
+                1 min
+              {% else %}
+                {{ words | divided_by:180 }} mins
+            {% endif %} read
+          	&nbsp;
+          </span>
+        </p>
+      </div>
+    </div>
 
     <main class="site__content">
       <div class="container">
-        <article class="post-content">
+        <article class="post-content" itemprop="articleBody">
 
           {{ content }}
 
@@ -22,6 +51,7 @@ layout: post
           <div class="post-content">
             <div class="control">
               {% if page.previous.url %}
+
                 <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
               {% endif %}
             </div>
@@ -34,18 +64,21 @@ layout: post
           </div>
         </div>
       </div>
-      <div class="comments">
-        <div class="container">
-          <div class="post-content">
 
-            {% if site.disqus.shortname %}
+      {% if site.disqus.shortname %}
+
+        <div class="comments">
+          <div class="container">
+            <div class="post-content">
 
               {% include disqus.html %}
 
-            {% endif %}
+            </div>
           </div>
         </div>
-      </div>
+
+      {% endif %}
+
     </main>
 
     {% include footer.html %}

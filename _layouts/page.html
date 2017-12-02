@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
@@ -7,7 +7,17 @@ layout: page
 
   <body class="site">
 
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
     {% include header.html %}
+
     <div class="hero--small">
       <div class="hero__wrap">
         <h1 class="hero__title">{{ page.title }}</h1>

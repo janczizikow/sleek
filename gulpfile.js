@@ -11,11 +11,18 @@ const messages = {
 };
 
 // Performance workflow plugins
+// const htmlmin = require('gulp-htmlmin');
 const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const critical = require('critical');
+
+// Image Generation TODO
+const responsive = require('gulp-responsive');
+const $ = require('gulp-load-plugins')();
+const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
 
 const src = {
   css: '_sass/main.scss',
@@ -69,9 +76,24 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('assets/css'));
 });
 
+// Minify HTML
+// gulp.task('html', function() {
+//   gulp.src('./_site/index.html')
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(gulp.dest('./_site'))
+//   gulp.src('./_site/*/*html')
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(gulp.dest('./_site/./'))
+// });
+
 // Uglify JS
 gulp.task('js', function() {
-  return gulp.src(src.js)
+  return gulp.src([
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/lazysizes/lazysizes.js',
+      'node_modules/lazysites/plugins/progressive/ls.progressive.js',
+      src.js
+    ])
     .pipe(concat('bundle.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dist.js))
@@ -106,8 +128,50 @@ gulp.task('critical', function (cb) {
 
 gulp.task('watch', function() {
   gulp.watch('_sass/**/*.scss', ['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*',  'pages_/*', '_include/*html'], ['rebuild']);
+  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md',  'pages_/*.md', '_include/*html'], ['rebuild']);
   gulp.watch('_js/**/*.js', ['js']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+// Images
+gulp.task('img', function() {
+  return gulp.src('_img/posts/*.{png,jpg}')
+    .pipe($.responsive({
+      // For all the images in the folder
+      '*': [{
+        width: 230,
+        rename: {suffix: '_placehold'},
+      }, {
+        // thubmnail
+        width: 535,
+        rename: { suffix: '_thumb' },
+      }, {
+        // thumbnail @2x
+        width: 535 * 2,
+        rename: { suffix: '_thumb@2x' },
+      }, {
+        width: 575,
+        rename: { suffix: '_xs'}
+      }, {
+        width: 767,
+        rename: {suffix: '_sm'}
+      }, {
+        width: 991,
+        rename: { suffix: '_md' }
+      }, {
+        width: 1999,
+        rename: { suffix: '_lg' }
+      }, {
+        // max-width hero
+        width: 1920,
+      }],
+    }, {
+      quality: 70,
+      progressive: true,
+      withMetadata: false,
+    }))
+    .pipe(imagemin())
+    .pipe(gulp.dest('assets/img/posts/'));
+});

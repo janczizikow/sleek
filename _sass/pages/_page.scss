@@ -3,7 +3,7 @@
   min-height: 16.25rem;
   width: 100%;
   position: relative;
-  background: #dde5ea url("../img/shane-rounce-205187.jpg") no-repeat 50% / cover;
+  background: #dde5ea url("../img/posts/sleek.jpg") no-repeat 50% / cover;
 
   @include breakpoint($lg) {
     margin: 0 auto;
@@ -50,11 +50,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: rgba(255, 255, 255, 0.8);
   max-width: 40em;
   z-index: 1;
 
   .hero__title {
-    color: #fff;
+    color: $bg-color;
 
     @include breakpoint($md) {
       font-size: 2.625em;

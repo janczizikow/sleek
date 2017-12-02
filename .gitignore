@@ -2,7 +2,9 @@
 .bundle
 .sass-cache
 _site
+_img
 Gemfile.lock
+
 
 # OS Generated files #
 ######################
@@ -47,13 +49,6 @@ build/
 *.bridgesupport
 build-iPhoneOS/
 build-iPhoneSimulator/
-
-
-## Documentation cache and generated files:
-/.yardoc/
-/_yardoc/
-/doc/
-/rdoc/
 
 ## Environment normalization:
 /.bundle/

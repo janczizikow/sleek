@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: compress
 ---
 <html lang="{{ page.lang | default: site.lang | default: "en_US" }}">
 
@@ -7,34 +7,35 @@ layout: default
 
   <body class="site">
 
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
     {% include header.html %}
 
     <div class="hero">
       <div class="hero__wrap">
-        <h1 class="hero__title">Sleek theme</h1>
+        <h1 class="hero__title">Sleek</h1>
+        <p class="hero__meta">Modern Jekyll theme focused on speed performance & SEO best practices</p>
       </div>
     </div>
+
     <main class="site__content">
       <section class="blog">
         <div class="container">
+          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-          <div class="post-list">
             {% for post in site.posts %}
-              <a class="post-card" href="{{ post.url | relative_url }}">
-                <img src="./assets/img/shane-rounce-205187.jpg" alt="{{post.title}}"/>
-                {% if post.featured-img %}
-                  <div></div>
-                {% endif %}
-                <div class="post-card--inner">
-                  <h2>{{ post.title | escape }}</h2>
-                  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-                  <time class="post-card--meta">{{ post.date | date: date_format }}</time>
-                  <p>{{ post.content | strip_html | truncatewords:20 }}</p>
-                </div>
-              </a>
+              {% include card.html %}
             {% endfor %}
-          </div>
 
+            <!-- {% include pagination.html %} -->
+          </div>
         </div>
       </section>
     </main>

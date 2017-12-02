@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/jekyll-sleek.svg)](https://badge.fury.io/rb/jekyll-sleek)
+
 # Sleek
 
 Sleek is a modern Jekyll theme focused on speed performance & SEO best practices. In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
