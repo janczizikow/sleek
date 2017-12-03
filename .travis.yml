@@ -3,8 +3,8 @@ cache: bundler
 sudo: false
 rvm: 2.3.3
 
-install: scripts/bootstrap
-script: scripts/cibuild
+install: script/bootstrap
+script: script/cibuild
 
 env:
   global:
