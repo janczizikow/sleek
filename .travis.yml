@@ -5,7 +5,3 @@ rvm: 2.3.3
 
 install: script/bootstrap
 script: script/cibuild
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
