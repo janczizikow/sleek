@@ -90,8 +90,8 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
   return gulp.src([
       'node_modules/jquery/dist/jquery.js',
+      'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
       'node_modules/lazysizes/lazysizes.js',
-      'node_modules/lazysites/plugins/progressive/ls.progressive.js',
       src.js
     ])
     .pipe(concat('bundle.js'))

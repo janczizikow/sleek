@@ -41,9 +41,9 @@
 
 .post-card__thumb {
   margin: 0;
-  background: $dark-light;
+  background: $bg-color;
   position: relative;
-
+  overflow: hidden;
   &::after {
     content: "";
     display: block;

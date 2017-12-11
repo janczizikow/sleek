@@ -3,7 +3,11 @@
   min-height: 16.25rem;
   width: 100%;
   position: relative;
-  background: #dde5ea url("../img/posts/sleek.jpg") no-repeat 50% / cover;
+  // background: #dde5ea url("../img/posts/sleek.jpg") no-repeat 50% / cover;
+  background-color: #dde5ea;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
 
   @include breakpoint($lg) {
     margin: 0 auto;
@@ -27,6 +31,7 @@
   min-height: 8.75rem;
   width: 100%;
   position: relative;
+  background-color: $dark-light;
 
   @include breakpoint($lg) {
     height: 12.5em;
