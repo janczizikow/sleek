@@ -1,3 +1,39 @@
+.btn,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  position: relative;
+  display: inline-block;
+  padding: 18px 30px;
+  font-size: 11px;
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  color: $bg-color;
+  background-color: $button-dark;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+  transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+  outline: 0;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  :focus,
+  :active {
+    color: $bg-color;
+    background-color: lighten($button-dark, 14%);
+    outline: 0;
+  }
+}
+
 .btn + .btn {
   margin-top: 2em;
   @include breakpoint(350px) {
@@ -6,95 +42,13 @@
   }
 }
 
-.btn, button, input[type="submit"],input[type="reset"],input[type="button"] {
-    position: relative;
-    display: inline-block;
-    padding: 18px 30px;
-    font-size: 11px;
-    font-family: inherit;
-    line-height: 1.5;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    cursor: pointer;
-    color: $bg-color;
-    background-color: $button-dark;
-    text-align: center;
-    border: none;
-    border-radius: 0px;
-    transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
-    &:after {
-      display: none;
-    }
-    &:hover, :focus, :active {
-      color: $bg-color;
-      background-color: lighten($button-dark, 14%);
-      outline: 0;
-    }
-}
-.btn-lg {
-  padding: 20px 48px;
-  padding: 2rem 4.8rem;
-  position: relative;
-}
-
-.btn-primary {
-  background-color: $primary!important;
-  color: $bg-color!important;
-  &:hover, :focus, :active {
-    color: $bg-color;
-    background-color: $primary-light;
-    outline: 0;
-  }
-}
-
-.pill {
-    position: relative;
-    display: inline-block;
-    padding: 15px 42px;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: $bg-color;
-    background-color: $button-dark;
-    border-radius: 300px;
-    line-height: 1.5;
-    text-align: center;
-    border: none;
-    transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
-    &:after {
-      display: none;
-    }
-    &:hover, :focus, :active {
-      color: $bg-color;
-      background-color: $dark-light;
-    }
-    &:focus {
-      outline: none;
-    }
-}
-.pill-lg {
-  padding: 20px 48px;
-  padding: 2rem 4.8rem;
-  position: relative;
-}
-.btn-wrap {
-  text-align: center;
-  @include breakpoint($md) {
-    text-align: left;
-  }
-}
-.btn-center {
-  text-align: center;
-}
-
 button:disabled {
   cursor: not-allowed;
   opacity: .65;
   transition: background-color .2s ease;
-  &:hover, :focus {
+
+  &:hover,
+  :focus {
     background-color: $button-dark;
   }
 }

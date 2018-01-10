@@ -4,6 +4,8 @@
 _site
 _img
 Gemfile.lock
+/.idea/
+npm-debug.log
 
 
 # OS Generated files #

@@ -15,22 +15,6 @@
     align-items: center;
   }
 
-  @include breakpoint($lg) {
-
-    nav > .menu-left a {
-      color: rgba(255, 255, 255, 0.75);
-
-      &:hover {
-        color: $bg-color;
-
-        &::after {
-          background: $bg-color;
-        }
-      }
-    }
-
-  }
-
   &.fix-nav {
     position: fixed;
     background-color: rgba(255,255,255,1);
@@ -134,5 +118,33 @@
     display: flex;
     visibility: visible;
     height: 100%;
+  }
+
+  .header__link {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: $link-color;
+      transition: all 0.2 ease-in-out;
+    }
+
+    &:hover {
+      color: darken($link-color, 20%);
+    }
+
+    &:hover::after,
+    :active::after,
+    :focus::after {
+      width: 100%;
+      color: darken($link-color, 20%);
+      transition: all .35s cubic-bezier(.694, .048, .335, 1);
+    }
   }
 }

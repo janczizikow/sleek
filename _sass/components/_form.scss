@@ -47,8 +47,8 @@ textarea {
   }
 
   &:hover::after,
-  :focus:after,
-  :active:after {
+  :focus::after,
+  :active::after {
     width: 100%;
   }
 

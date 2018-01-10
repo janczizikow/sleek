@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "jquery"
+  ],
+  "plugins": [
+    "dollar-sign"
+  ],
+  "rules": {
+    "dollar-sign/dollar-sign": [2, "ignoreProperties"]
+  }
+}

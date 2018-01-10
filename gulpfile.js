@@ -5,13 +5,13 @@ const cp = require('child_process');
 // Basic workflow plugins
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
-const jekyll = 'jekyll';
+const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 const messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
 // Performance workflow plugins
-// const htmlmin = require('gulp-htmlmin');
+const htmlmin = require('gulp-htmlmin');
 const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
@@ -76,22 +76,13 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('assets/css'));
 });
 
-// Minify HTML
-// gulp.task('html', function() {
-//   gulp.src('./_site/index.html')
-//     .pipe(htmlmin({ collapseWhitespace: true }))
-//     .pipe(gulp.dest('./_site'))
-//   gulp.src('./_site/*/*html')
-//     .pipe(htmlmin({ collapseWhitespace: true }))
-//     .pipe(gulp.dest('./_site/./'))
-// });
-
 // Uglify JS
 gulp.task('js', function() {
   return gulp.src([
       'node_modules/jquery/dist/jquery.js',
       'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
       'node_modules/lazysizes/lazysizes.js',
+      'node_modules/velocity-animate/velocity.js',
       src.js
     ])
     .pipe(concat('bundle.js'))
@@ -134,6 +125,16 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['browser-sync', 'watch']);
 
+
+// Minify HTML
+gulp.task('html', function() {
+    gulp.src('./_site/index.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./_site'))
+    gulp.src('./_site/*/*html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./_site/./'))
+});
 
 // Images
 gulp.task('img', function() {

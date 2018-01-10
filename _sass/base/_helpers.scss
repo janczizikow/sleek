@@ -4,8 +4,9 @@
   -webkit-filter: blur(1rem);
   filter: blur(1rem);
   transition: filter 400ms, -webkit-filter 400ms;
+
   &.lazyloaded {
-		-webkit-filter: blur(0);
+    -webkit-filter: blur(0);
     filter: blur(0);
 	}
 }

@@ -44,6 +44,7 @@
   background: $bg-color;
   position: relative;
   overflow: hidden;
+
   &::after {
     content: "";
     display: block;
