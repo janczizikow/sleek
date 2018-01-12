@@ -48,22 +48,30 @@ layout: compress
           {{ content }}
 
         </article>
-      </div>
-      <div class="controls">
-        <div class="container">
-          <div class="post-content">
-            <div class="control">
-              {% if page.previous.url %}
+        <div class="post-content controls__inner">
+          <div class="controls__item prev">
+            {% if page.previous.url %}
 
-                <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-              {% endif %}
-            </div>
+            <span>Previous</span>
+              <a href="{{page.previous.url}}">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11"><path fill="fillColor" d="M5.647 1.718c.37-.434.323-1.09-.106-1.465A1.016 1.016 0 0 0 4.095.36L.25 4.875a1.05 1.05 0 0 0 .017 1.378l3.95 4.407c.38.424 1.03.456 1.448.07a1.05 1.05 0 0 0 .07-1.468l-3.34-3.725 3.253-3.819z"/></svg>
+              </span>
+                {{page.previous.title | strip_html | truncate: 30}}
+              </a>
+            {% endif %}
+          </div>
 
-            <div class="control">
-              {% if page.next.url %}
-                <a class="next" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
-              {% endif %}
-            </div>
+          <div class="controls__item next">
+            {% if page.next.url %}
+            <span>Next</span>
+            <a href="{{page.next.url}}">
+              {{page.next.title | strip_html | truncate: 30}}
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11"><path fill="#fillColor" d="M.353 9.282c-.37.434-.323 1.09.106 1.465a1.016 1.016 0 0 0 1.446-.107L5.75 6.125a1.05 1.05 0 0 0-.017-1.378L1.784.34A1.015 1.015 0 0 0 .336.27a1.05 1.05 0 0 0-.07 1.468l3.34 3.725L.353 9.282z"/></svg>
+              </span>
+            </a>
+            {% endif %}
           </div>
         </div>
       </div>

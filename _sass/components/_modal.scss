@@ -27,17 +27,21 @@
 
 .modal__content {
   position: relative;
-  padding: 1em 2em;
+  padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
   background-color: $bg-color;
   border-radius: 4px;
+
+  h1 {
+    text-align: center;
+  }
 }
 
 .modal__close-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 16px;
+  right: 16px;
   background-color: transparent;
   border: 0;
   outline: 0;

@@ -129,10 +129,11 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 2px;
-      width: 0;
+      height: 3px;
+      width: 100%;
+      transform: scaleX(0);
       background: $link-color;
-      transition: all 0.2 ease-in-out;
+      transition: color 0.2s ease-in-out, transform .2s ease-in-out;
     }
 
     &:hover {
@@ -142,9 +143,9 @@
     &:hover::after,
     :active::after,
     :focus::after {
-      width: 100%;
+      transform: scaleX(1);
       color: darken($link-color, 20%);
-      transition: all .35s cubic-bezier(.694, .048, .335, 1);
+      transition: transform .2s ease-in-out;
     }
   }
 }
