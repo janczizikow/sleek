@@ -3,7 +3,7 @@
 
 A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
 
-![Sleek Jekyll Theme](./sleek.png)
+![Sleek Jekyll Theme](./sleek.jpg)
 
 ## Features
 
