@@ -44,6 +44,7 @@
   a {
     color: $heading-color;
     font-weight: bold;
+    border-bottom: 0;
 
     svg {
       transition: all .2s linear;
@@ -51,6 +52,7 @@
 
     &:hover {
       color: $primary;
+      border-bottom: 0;
 
       svg {
         fill: $primary;

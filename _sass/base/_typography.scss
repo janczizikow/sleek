@@ -36,7 +36,8 @@ h6 {
 a {
   color: $link-color;
   text-decoration: none;
-  transition: color .2s linear;
+  transition: all .2s linear;
+  border-bottom: 1px dashed $link-color;
 
   &:active,
   &:focus {
@@ -46,7 +47,14 @@ a {
   &:hover,
   &:focus {
     color: $primary-light;
+    border-bottom: 1px solid $primary-light;
   }
+}
+
+hr {
+  height: 1px;
+  background: $border;
+  border: 0;
 }
 
 em {

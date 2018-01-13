@@ -7,10 +7,12 @@
   background-color: $bg-color;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   margin-bottom: 5.26316%;
+  border-bottom: 0;
   transition: box-shadow .25s ease;
 
   &:hover,
   &:focus {
+    border-bottom: 0;
     box-shadow: 0 2px 40px 0 hsla(232, 8%, 63%, .3);
   }
 

@@ -1,12 +1,9 @@
 /*eslint-env jquery*/
-// log what was clicked (only for dev)
-// $( document ).click( function( e ) {
-//     console.log( e.target );
-// } );
 
 // Jquery & Velocity JS included in GULP
 $( document ).ready( function() {
 
+    toggleMobileNav();
     ShowHideNav();
     formCheck();
 
@@ -17,18 +14,78 @@ $( document ).keyup( function( e ) {
     e.keyCode === 27 ? removeModal() : null;
 } );
 
+$( window ).resize( function() {
+    $( ".header" ).removeClass( "hide-nav" ); // Ensure nav will be shown on resize
+    $( ".header__links" ).removeAttr( "style" ); // If mobile nav was collapsed, make sure it's show on DESK
+    $( ".header__overlay" ).remove();
+} );
+
+// Toggle Mobile Navigation
+function toggleMobileNav() {
+    $( ".header__toggle" ).click( function() {
+
+        if ( $( ".header__links" ).hasClass( "js--open" ) ) {
+            hideMobileNav();
+        }
+        else {
+            openMobileNav();
+        }
+    } );
+
+    $( ".header__overlay" ).click( function() {
+        hideMobileNav();
+    } );
+}
+
+function openMobileNav() {
+    $( ".header__links" ).velocity( "slideDown", {
+        duration: 300,
+        easing: "ease-out",
+        display: "block",
+        visibility: "visible",
+        begin: function() {
+            $( ".header__toggle" ).addClass( "--open" );
+            $( "body" ).append( "<div class='header__overlay'></div>" );
+        },
+        progress: function () {
+            $( ".header__overlay" ).addClass( "--open" );
+        },
+        complete: function() {
+            $( this ).addClass( "js--open" );
+        }
+    } );
+}
+
+function hideMobileNav() {
+    $( ".header__overlay" ).remove();
+    $( ".header__links" ).velocity( "slideUp", {
+        duration: 300,
+        easing: "ease-out",
+        display: "none",
+        visibility: "hidden",
+        begin: function() {
+            $( ".header__toggle" ).removeClass( "--open" );
+        },
+        progress: function () {
+            $( ".header__overlay" ).removeClass( "--open" );
+        },
+        complete: function() {
+            $( this ).removeClass( "js--open" );
+            $( ".header__toggle, .header__overlay" ).removeClass( "--open" );
+        }
+    } );
+}
 
 // SHOW/HIDE NAV
 function ShowHideNav() {
     var previousScroll = 0, // previous scroll position
         $header = $( ".header" ), // just storing header in a variable
         navHeight = $header.outerHeight(), // nav height
-        detachPoint = 650, // after scroll past this nav will be hidden
+        detachPoint = 576 + 60, // after scroll past this nav will be hidden
         hideShowOffset = 6; // scroll value after which nav will be shown/hidden
 
     $( window ).scroll( function() {
         var wW = 1024;
-
         // if window width is more than 1024px start show/hide nav
         if ( $( window ).width() >= wW ) {
             if ( !$header.hasClass( "fixed" ) ) {
@@ -41,26 +98,27 @@ function ShowHideNav() {
                     // if scrolled past detach point -> show nav
                     if ( currentScroll > detachPoint ) {
                         if ( !$header.hasClass( "fix-nav" ) ) {
-$header.addClass( "fix-nav" );
-}
+                            $header.addClass( "fix-nav" );
+                        }
                     }
+
                     if ( scrollDifference >= hideShowOffset ) {
                         if ( currentScroll > previousScroll ) {
 
                             // scroll down -> hide nav
                             if ( !$header.hasClass( "hide-nav" ) ) {
-$header.addClass( "hide-nav" );
+                                $header.addClass( "hide-nav" );
 }
                         } else {
 
                             // scroll up -> show nav
                             if ( $header.hasClass( "hide-nav" ) ) {
-$( $header ).removeClass( "hide-nav" );
-}
+                                $( $header ).removeClass( "hide-nav" );
+                            }
                         }
                     }
-                } else {
-
+                }
+                else {
                     // at the top
                     if ( currentScroll <= 0 ) {
                         $header.removeClass( "hide-nav show-nav" );
@@ -83,10 +141,6 @@ $( $header ).removeClass( "hide-nav" );
     } );
 }
 
-// Ensure nav will be shown on resize
-$( window ).resize( function() {
-    $( ".header" ).removeClass( "hide-nav" );
-} );
 
 function openModal() {
     $( "body" ).css( "overflow", "hidden" );

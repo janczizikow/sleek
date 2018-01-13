@@ -125,7 +125,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['browser-sync', 'watch']);
 
-
 // Minify HTML
 gulp.task('html', function() {
     gulp.src('./_site/index.html')

@@ -1,6 +1,6 @@
 title: Sleek # your site title
 author: GitHub User
-email: your-email@domain.com # email be used for form submission
+email: your-email@domain.com # email for form submission, you also have to change it in _js/scripts.js
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -31,10 +31,13 @@ exclude:
   - README.md
   - node_modules
   - package.json
+  - package-lock.json
   - Gemfile
   - Gemfile.lock
   - vendor
   - npm-debug.log
+  - gulpfile.js
+  - sleek.png
 
 include: ['_pages']
 permalink: /:title/

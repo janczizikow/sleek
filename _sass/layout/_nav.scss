@@ -13,30 +13,15 @@
   a {
     display: flex;
     align-items: center;
+    border-bottom: 0;
+
   }
 
   &.fix-nav {
     position: fixed;
-    background-color: rgba(255,255,255,1);
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
-    z-index: 5;
+    background-color: $bg-color;
     transition: transform .3s, background-color 0.5s ease;
-    nav > .logo {
-      color: $heading-color;
-      background-color: rgba(255, 255, 255, 0.96);
-    }
-
-    nav > .menu-left a {
-      color: $text-color;
-
-      &:hover {
-        color: $heading-color;
-
-        &:after {
-          background: $primary;
-        }
-      }
-    }
+    z-index: 5;
   }
 
   &.hide-nav {
@@ -52,10 +37,12 @@
   padding: 19px 0;
   margin-right: 1.25rem;
   outline: 0;
+  border-bottom: 0;
   color: $heading-color;
 
   &:hover {
     color: $heading-color;
+    border-bottom: 0;
   }
 
   .header__logo--container {
@@ -76,23 +63,35 @@
 }
 
 .header__links {
-  display: none;
-  visibility: hidden;
+  padding-bottom: .5rem;
+  display: block;
+  position: absolute;
+  top: 3.75em;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: $bg-color;
+  &.js--open {
 
-  a {
-    color: $text-color;
-    padding: 0 1em;
   }
 }
+
+.header__link {
+  color: $text-color;
+  padding: .938rem 0;
+  border-top: 1px solid $border;
+}
+
 
 .header__toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 24px;
+  width: 44px;
   height: 100%;
   background-color: transparent;
-  padding: 0;
+  padding-left: 1.25rem;
+  cursor: pointer;
 
   span {
     display: block;
@@ -101,10 +100,47 @@
     background-color: $text-color;
     width: 100%;
     height: 2px;
+    border-radius: 1px;
+    transition: all 0.2s cubic-bezier(1, 0.13, 0.35, 1.09);
 
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  &.--open {
+    span {
+
+      &:first-child {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+
+      &:nth-child(2n) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg) translate(4px, -4px);
+      }
+    }
+  }
+}
+
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-color: rgba(0, 0 , 0, .75);
+  z-index: 2;
+  transition: opacity 1s ease 0.1s;
+
+  &.--open {
+    width: 100%;
+    height: 120%;
+    opacity: 1;
   }
 }
 
@@ -115,13 +151,26 @@
   }
 
   .header__links {
+    position: static;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     visibility: visible;
+    width: auto;
     height: 100%;
+  }
+
+  .header__links-wrapper {
+    display: flex;
+    height: 100%;
+    padding: 0;
   }
 
   .header__link {
     position: relative;
+    padding: .938rem 1rem;
+    border: 0;
+    height: 100%;
 
     &::after {
       content: "";
