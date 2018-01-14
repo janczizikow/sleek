@@ -15,24 +15,6 @@
   background-color: $dark-light;
 }
 
-.title {
-  position: relative;
-  margin: 0 0 85px;
-  text-align: center;
-  text-transform: capitalize;
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -8px;
-    width: 50px;
-    height: 2px;
-    background-color: $primary;
-  }
-}
-
 .hidden {
   display: none;
   visibility: hidden;

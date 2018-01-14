@@ -7,47 +7,40 @@ featured-img: sleek
 ## Getting started
 
 [GitHub Pages](https://pages.github.com) can automatically generate and serve the website for you.
-Let's say you have a username/organisation `my-org` and project `my-proj`; if you locate Jekyll source under `docs` folder of master branch in your repo `github.com/my-org/my-proj`, the website will be served on `my-org.github.io/my-proj`.
-The good thing about coupling your documentation with the source repo is, whenever you merge features with regarding content to master branch, it will also be published in the webpage instantly.
+Let's say you have a username/organisation `my-org` and project `my-proj`; if you locate Jekyll source under `blog` folder of master branch in your repo `github.com/my-org/my-proj`, the website will be served on `my-org.github.io/my-proj`.
 
-1. Just download the source from [github.com/janczizikow/sleek](https://github.com/janczizikow/sleek/) into your repo under `docs` folder.
+1. Just download or fork and clone the source from [github.com/janczizikow/sleek](https://github.com/janczizikow/sleek/).
+2. Make sure your local machine has ruby and node
 2. Edit site settings in  `_config.yml` file according to your project.
-3. Replace `favicon.ico` and `img/logonav.png` with your own logo.
+3. Replace `favicons` and `_includes/logo.svg` with your own logo.
+
+**Note** that you might have to adjust some CSS depending on the width and height of your logo. You can find Header / Navigation related SCSS in `_sass/layout/nav.scss`.
 
 ## Writing content
 
-### Docs
+### Posts
 
-Docs are [collections](https://jekyllrb.com/docs/collections/) of pages stored under `_docs` folder. To create a new page:
+Create a new Markdown file such as `2017-01-13-my-post.md` in `_post` folder. Configure YAML Front Matter (stuff between `---`):
+ 
+```yaml
 
-**1.** Create a new Markdown as `_docs/my-page.md` and write [front matter](https://jekyllrb.com/docs/frontmatter/) & content such as:
-
-```
 ---
-title: My Page
-permalink: /docs/my-page/
+layout: post #need to be post
+title: Getting Started with Sleek #title of your post
+featured-img: sleek #optional - if you want you can include name of hero image
 ---
+ 
+ ```
 
-Hello World!
-```
+#### Images
 
-**2.** Add the pagename to `_pages/docs.yml` file in order to list in docs navigation panel:
-
-```
-- title: My Group Title
-  docs:
-  - my-page
-```
-
-### Blog posts
-
-Add a new Markdown file such as `2017-05-09-my-post.md` and write the content similar to other post examples.
+In case you want to add a hero image to the post, apart from changing `featured-img` in YAML, you also need to add the image file to the project. To do so, just upload an image in `.jpg` format to `_img` folder. The name must before the `.jpg` file extension has to match with `featured-img` in YAML. Next, run `gulp img` from command line to generate optimized version of the image and all the thumbnails. You have to restart  the jekyll server to see the changes. Sleek uses (Lazy Sizes)[https://github.com/aFarkas/lazysizes] Lazy Loader for loading images. Check the link for more info. Lazy Sizes doesnt't require any configuration and it's going to be included in your bundled js file.
 
 ### Pages
 
-The home page is located under `index.md` file. You can change the content or design completely different welcome page for your taste.
+The home page is located under `index.md` file. To change the content or design you have to edit the `default.html` file in `_layouts` folder.
 
-In order to add a new page, create a new html or markdown file under root directory and link it in `_includes/header.html`.
+In order to add a new page, create a new html or markdown file under root directory or inside `_pages` folder and link it in `_includes/header.html`.
 
 ### Images TODO
 
