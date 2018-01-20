@@ -21,7 +21,7 @@ Let's say you have a username/organisation `my-org` and project `my-proj`; if yo
 ### Posts
 
 Create a new Markdown file such as `2017-01-13-my-post.md` in `_post` folder. Configure YAML Front Matter (stuff between `---`):
- 
+
 ```yaml
 
 ---
@@ -29,8 +29,8 @@ layout: post #need to be post
 title: Getting Started with Sleek #title of your post
 featured-img: sleek #optional - if you want you can include name of hero image
 ---
- 
- ```
+
+```
 
 #### Images
 

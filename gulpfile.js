@@ -1,9 +1,17 @@
+'use strict';
+
 // Gulp and node
 const gulp = require('gulp');
 const cp = require('child_process');
+const notify = require('gulp-notify');
+const size = require('gulp-size');
 
 // Basic workflow plugins
 const browserSync = require('browser-sync');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const clean = require('gulp-clean');
 const sass = require('gulp-sass');
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 const messages = {
@@ -14,11 +22,11 @@ const messages = {
 const htmlmin = require('gulp-htmlmin');
 const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
-const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const critical = require('critical');
+const sw = require('sw-precache');
 
-// Image Generation TODO
+// Image Generation
 const responsive = require('gulp-responsive');
 const $ = require('gulp-load-plugins')();
 const rename = require('gulp-rename');
@@ -26,11 +34,20 @@ const imagemin = require('gulp-imagemin');
 
 const src = {
   css: '_sass/main.scss',
-  js: '_js/**/*.js',
+  js: '_js/scripts.js',
 }
 const dist = {
   css: '_site/assets/css',
   js: '_site/assets/js',
+}
+
+function handleErrors() {
+  var args = Array.prototype.slice.call(arguments);
+  notify.onError({
+    title: 'Compile Error',
+    message: '<%= error.message %>'
+  }).apply(this, args);
+  this.emit('end'); // Keep gulp from hanging on this task
 }
 
 // Build the Jekyll Site
@@ -46,12 +63,13 @@ gulp.task('deploy', ['jekyll-build'], function () {
 });
 
 // Rebuild Jekyll & do page reload
-gulp.task('rebuild', ['jekyll-build'], function () {
+gulp.task('rebuild', ['jekyll-build'], function (done) {
     browserSync.reload();
+    done();
 });
 
-// Rebuild Jekyll & do page reload
-gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
+// Serve after jekyll-build
+gulp.task('browser-sync', ['sass', 'js', 'sw', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -59,16 +77,15 @@ gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
     });
 });
 
-// Complie SCSS to CSS & Prefix
+// SASS
 gulp.task('sass', function() {
   return gulp.src(src.css)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed',
       includePaths: ['scss'],
-      // functions: sassFunctions(),
       onError: browserSync.notify
-    }))
+    }).on('error', sass.logError))
     .pipe(prefix())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(dist.css))
@@ -76,23 +93,21 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('assets/css'));
 });
 
-// Uglify JS
+//  JS
 gulp.task('js', function() {
-  return gulp.src([
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
-      'node_modules/lazysizes/lazysizes.js',
-      'node_modules/velocity-animate/velocity.js',
-      src.js
-    ])
-    .pipe(concat('bundle.js'))
+  return browserify(src.js, {debug: true, extensions: ['es6']})
+    .transform('babelify', {presets: ['es2015']})
+    .bundle()
+    .on('error', handleErrors)
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify())
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(size())
     .pipe(gulp.dest(dist.js))
     .pipe(browserSync.reload({stream: true}))
     .pipe(gulp.dest('assets/js'))
-    .on('error', function(err){
-      console.error('Error in uglify taks', err.toString());
-    });
 });
 
 gulp.task('critical', function (cb) {
@@ -120,7 +135,7 @@ gulp.task('critical', function (cb) {
 gulp.task('watch', function() {
   gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md',  'pages_/*.md', '_include/*html'], ['rebuild']);
-  gulp.watch('_js/**/*.js', ['js']);
+  gulp.watch(src.js, ['js']);
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
@@ -128,11 +143,21 @@ gulp.task('default', ['browser-sync', 'watch']);
 // Minify HTML
 gulp.task('html', function() {
     gulp.src('./_site/index.html')
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('./_site'))
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest('./_site'))
     gulp.src('./_site/*/*html')
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('./_site/./'))
+      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest('./_site/./'))
+});
+
+gulp.task('sw', function() {
+  const rootDir ='./';
+  const distDir = './_site';
+
+  sw.write(`${rootDir}/sw.js`, {
+    staticFileGlobs: [distDir + '/**/*.{js,html,css,png,jpg,svg}'],
+    stripPrefix: distDir
+  });
 });
 
 // Images
@@ -175,3 +200,19 @@ gulp.task('img', function() {
     .pipe(imagemin())
     .pipe(gulp.dest('assets/img/posts/'));
 });
+
+
+gulp.task('clean', function () {
+    return gulp.src('_site', {read: false})
+      .pipe(clean());
+});
+
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+      baseDir: '_site'
+    }
+  });
+});
+
+gulp.task('build', ['sass', 'js', 'jekyll-build', 'img', 'sw']);

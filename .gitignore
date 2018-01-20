@@ -4,9 +4,10 @@
 _site
 _img
 Gemfile.lock
-/.idea/
+.idea/*
 npm-debug.log
-
+*.js.map
+maps
 
 # OS Generated files #
 ######################

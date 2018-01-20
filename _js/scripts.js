@@ -1,8 +1,10 @@
-/*eslint-env jquery*/
+window.jQuery = window.$ = require( "jquery" );
+require( "velocity-animate/velocity.js" );
+require( "lazysizes" );
+require( "lazysizes/plugins/unveilhooks/ls.unveilhooks.js" );
 
 // Jquery & Velocity JS included in GULP
 $( document ).ready( function() {
-
     toggleMobileNav();
     ShowHideNav();
     formCheck();
@@ -29,14 +31,18 @@ function toggleMobileNav() {
 
         if ( $( ".header__links" ).hasClass( "js--open" ) ) {
             hideMobileNav();
-        }
-        else {
+        } else {
             openMobileNav();
         }
     } );
 
-    $( ".header__overlay" ).click( function() {
+    $( "body" ).on( "click", function( e ) {
+
+      if ( e.target.classList.contains( "header__overlay" ) ) {
         hideMobileNav();
+      } else {
+        return;
+      }
     } );
 }
 
@@ -50,7 +56,7 @@ function openMobileNav() {
             $( ".header__toggle" ).addClass( "--open" );
             $( "body" ).append( "<div class='header__overlay'></div>" );
         },
-        progress: function () {
+        progress: function() {
             $( ".header__overlay" ).addClass( "--open" );
         },
         complete: function() {
@@ -69,7 +75,7 @@ function hideMobileNav() {
         begin: function() {
             $( ".header__toggle" ).removeClass( "--open" );
         },
-        progress: function () {
+        progress: function() {
             $( ".header__overlay" ).removeClass( "--open" );
         },
         complete: function() {
@@ -92,6 +98,7 @@ function ShowHideNav() {
 
     $( window ).scroll( function() {
         var wW = 1024;
+
         // if window width is more than 1024px start show/hide nav
         if ( $( window ).width() >= wW ) {
             if ( !$header.hasClass( "fixed" ) ) {
@@ -114,7 +121,7 @@ function ShowHideNav() {
                             // scroll down -> hide nav
                             if ( !$header.hasClass( "hide-nav" ) ) {
                                 $header.addClass( "hide-nav" );
-}
+                              }
                         } else {
 
                             // scroll up -> show nav
@@ -123,8 +130,8 @@ function ShowHideNav() {
                             }
                         }
                     }
-                }
-                else {
+                } else {
+
                     // at the top
                     if ( currentScroll <= 0 ) {
                         $header.removeClass( "hide-nav show-nav" );
@@ -138,10 +145,7 @@ function ShowHideNav() {
                 $header.removeClass( "hide-nav" );
             }
             previousScroll = currentScroll;
-        }
-
-        // if window width is less than 1024px fix nav
-        else {
+        } else {
             $header.addClass( "fix-nav" );
         }
     } );
@@ -222,8 +226,8 @@ function formCheck() {
 // Validate if the input is not empty
 function validateRequired( value ) {
     if ( value === "" ) {
-return false;
-}
+      return false;
+    }
     return true;
 }
 
@@ -267,18 +271,26 @@ $( "#contactForm" ).submit( function( e ) {
             $btn.prop( "disabled", true );
             $btn.text( "Sending..." );
         },
+        // eslint-disable-next-line no-unused-vars
         success: function( data ) {
             $inputs.val( "" );
             $textarea.val( "" );
             $btn.prop( "disabled", false );
             $btn.text( "Send" );
             openModal();
-            $( ".modal__body" ).append( "<h1>Thanks " + $name + "!</h1><p>Your message was successfully sent! Will get back to you soon.</p>" );
+            $( ".modal__body" ).append(
+              "<h1>Thanks " +
+              $name +
+              "!</h1><p>Your message was successfully sent! Will get back to you soon.</p>"
+            );
 
         },
         error: function( err ) {
             $( ".modal, .modal__overlay" ).addClass( "--show" );
-            $( ".modal__body" ).append( "<h1>Aww snap!</h1><p>Something went wrong, please try again. Error message:</p>" + err );
+            $( ".modal__body" ).append(
+              "<h1>Aww snap!</h1><p>Something went wrong, please try again. Error message: </p>" +
+              err
+            );
         }
     } );
 } );

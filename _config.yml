@@ -30,6 +30,7 @@ theme: jekyll-sleek
 exclude:
   - README.md
   - node_modules
+  - script
   - package.json
   - package-lock.json
   - Gemfile
@@ -37,7 +38,7 @@ exclude:
   - vendor
   - npm-debug.log
   - gulpfile.js
-  - sleek.png
+  - sleek.jpg
 
 include: ['_pages']
 permalink: /:title/
