@@ -56,16 +56,19 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
   width: 100%;
+  max-width: 90%;
   z-index: 1;
 
+  @include breakpoint($md) {
+    max-width: 40em;
+  }
+
   .hero__title {
+    font-size: 1.8em;
     color: $bg-color;
-    max-width: 90%;
-    margin-right: auto;
-    margin-left: auto;
+
 
     @include breakpoint($md) {
-      max-width: 40em;
       font-size: 2.625em;
       line-height: 3.125rem;
     }
