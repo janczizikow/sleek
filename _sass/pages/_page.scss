@@ -55,13 +55,17 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  max-width: 40em;
+  width: 100%;
   z-index: 1;
 
   .hero__title {
     color: $bg-color;
+    max-width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 
     @include breakpoint($md) {
+      max-width: 40em;
       font-size: 2.625em;
       line-height: 3.125rem;
     }
