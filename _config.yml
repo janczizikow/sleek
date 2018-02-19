@@ -1,17 +1,17 @@
-title: Sleek # your site title
-author: GitHub User
-email: your-email@domain.com # email for form submission, you also have to change it in _js/scripts.js
+title: freestudyabroadinfo # your site title
+author: freestudyabroadinfo
+email: noahzhy@gmail.com # email for form submission, you also have to change it in _js/scripts.js
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://janczizikow.github.io/sleek" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://freestudyabroadinfo.github.io/freestudyabroadinfo" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
 github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
 instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
 social:
-  name: Your Name
+  name: 张昊宇
   links:
     - https://twitter.com/BenBalter
     - https://www.facebook.com/ben.balter
@@ -20,8 +20,8 @@ social:
     - https://github.com/benbalter
     - https://keybase.io/benbalter
 
-disqus:
-  shortname: janczizikow # to enable comments replace with your_disqus_shortname
+#disqus:
+#  shortname: freestudyabroadinfo # to enable comments replace with your_disqus_shortname
 
 # Build settings
 markdown: kramdown
