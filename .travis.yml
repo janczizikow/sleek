@@ -6,13 +6,19 @@ rvm: 2.3.3
 notifications:
   email: false
 
-install: script/bootstrap
-script: script/cibuild
+install:
+  - python3 script/deployment-setup.py
+  - script/bootstrap
 
-# deploy to gh_pages branch
+script:
+  - script/cibuild
+
+# deploy staging to gh_pages branch
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   on:
-    branch: master
+    branch: staging
+
+# TODO deploy master to Union servers
