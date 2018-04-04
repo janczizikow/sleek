@@ -7,8 +7,8 @@ notifications:
   email: false
 
 install:
-  - pip3 install -r script/requirements.txt
-  - python3 script/deployment-setup.py
+  - pip install -r script/requirements.txt
+  - python script/deployment-setup.py
   - script/bootstrap
 
 script:
