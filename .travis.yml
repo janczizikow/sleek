@@ -3,10 +3,13 @@ cache: bundler
 sudo: false
 rvm: 2.3.3
 
+notifications:
+  email: false
+
 install: script/bootstrap
 script: script/cibuild
 
-# deploy to gh_pages branch 
+# deploy to gh_pages branch
 deploy:
   provider: pages
   skip_cleanup: true
