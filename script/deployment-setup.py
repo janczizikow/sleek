@@ -4,6 +4,7 @@ Change _config.yml variables as appropriate for branch
 """
 
 import os
+import yaml
 
 TRAVIS_BRANCH = "TRAVIS_BRANCH"
 MASTER = "master"
