@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   The Christian Union at Imperial College London is a student society which aims
   to give every student at Imperial an opportunity to hear about and respond to
   the good news of Jesus Christ.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/iccu-website" # the subpath of your site, e.g. /blog TODO: remove this when deploying to Union servers
 url: "" #"http://iccu.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: CU_Imperial # replace with your_twitter_username or comment to remove link from footer
 #github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
