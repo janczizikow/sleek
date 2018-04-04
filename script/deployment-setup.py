@@ -25,4 +25,4 @@ elif branch_name == STAGING:
     config[URL] = "https://imperial-cu.github.io/iccu-website"
 
     with open(CONFIG_YML, "w") as f:
-        yaml.dump(list_doc, f)
+        yaml.dump(config, f)
