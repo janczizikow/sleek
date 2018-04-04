@@ -7,6 +7,7 @@ notifications:
   email: false
 
 install:
+  - pip install yaml
   - python3 script/deployment-setup.py
   - script/bootstrap
 
