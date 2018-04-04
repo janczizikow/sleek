@@ -18,10 +18,10 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="hero lazyload" data-bg="{{site.url}}/assets/img/posts/sleek_lg.jpg">
+    <div class="hero lazyload" data-bg="{{site.url}}/assets/img/home-talk.jpg">
       <div class="hero__wrap">
-        <h1 class="hero__title">Sleek</h1>
-        <p class="hero__meta">Modern Jekyll theme focused on speed performance & SEO best practices</p>
+        <h1 class="hero__title">Imperial College Christian Union</h1>
+        <p class="hero__meta">Giving every student at Imperial an opportunity to hear about and respond to the good news of Jesus</p>
       </div>
     </div>
 
@@ -30,11 +30,26 @@ layout: compress
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-            {% for post in site.posts %}
+            {% for tile in site.data.home_tiles %}
               {% include card.html %}
             {% endfor %}
 
             <!-- {% include pagination.html %} -->
+          </div>
+        </div>
+        <div id="home-text" class="lazyload" data-bg="{{site.url}}/assets/img/group-photo.jpg">
+          <div class="container">
+            <h2>
+              We exist to share the message of Jesus on campus, and explore how this message relates to each and every one of us as we go through university together.
+            </h2>
+
+            <p>
+              ICCU is a community that believes that the message Jesus spoke is true: that he himself is God, and we can personally know him. We believe that knowing Jesus is essential for all things including life and death. That's why we want to introduce him to everyone.
+            </p>
+
+            <p>
+              Whether you'd call yourself a Christian, or wouldn't but are interested in the Christian faith, we'd love to welcome you to our events on campus! Have a look around, <a href="{{site_url}}/events">find out about our events</a> and <a href="{{site_url}}/about">explore the message that Jesus spoke and what we believe as a society</a>.
+            </p>
           </div>
         </div>
       </section>

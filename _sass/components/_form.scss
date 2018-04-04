@@ -10,7 +10,7 @@ textarea {
   background: transparent;
 
   &:focus {
-    border-color: $primary;
+    border-color: $bright-blue;
     transition: border-color .25s;
   }
 }
@@ -28,7 +28,7 @@ textarea {
     left: 0;
     width: 0;
     height: 2px;
-    background: $primary;
+    background: $bright-blue;
     z-index: 5;
     transition: width .45s cubic-bezier(.694, .048, .335, 1);
     transition-delay: .1s;

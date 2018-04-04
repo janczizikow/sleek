@@ -1,13 +1,12 @@
-<a class="post-card" href="{{ post.url | relative_url }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
-  {% if post.featured-img %}
+<a class="post-card" href="{{ tile.link }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+  {% if tile.image %}
   <figure class="post-card__thumb">
     <img
-      src="{{site.url}}/assets/img/posts/{{post.featured-img}}_placehold.jpg",
-      data-srcset="{{site.url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg, {{site.url}}/assets/img/posts/{{post.featured-img}}_thumb@2x.jpg 2x"
+      src="{{site.url}}/assets/img/{{tile.image}}",
       class="lazyload blur"
-      alt="{{post.title}}"
+      alt="{{tile.headline}}"
     />
-    <noscript><img src="{{site.url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg" alt="{{ post.title }}"></noscript>
+    <noscript><img src="{{site.url}}/assets/img/{{tile.image}}" alt="{{ tile.headline }}"></noscript>
   </figure>
   {% else %}
   <figure class="post-card__thumb">
@@ -16,16 +15,13 @@
   {% endif %}
   <div class="post-card__inner">
     <div class="post-card__header">
-      <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
-      {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+      <h2>{{ tile.headline }}</h2>
       <span class="post-card__meta">
-        <time>{{ post.date | date: date_format }}</time>
+        <time>{{ tile.subtitle }}</time>
       </span>
     </div>
-    {% if post.summary %}
-      <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
-    {% else %}
-      <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+    {% if tile.description %}
+      <p>{{ tile.description }}</p>
     {% endif %}
   </div>
 </a>

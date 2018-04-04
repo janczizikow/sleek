@@ -1,19 +1,27 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="260.000000pt" height="260.000000pt" viewBox="0 0 260.000000 260.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.11, written by Peter Selinger 2001-2013
-</metadata>
-<g transform="translate(0.000000,260.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M1237 1809 c-125 -29 -211 -117 -224 -228 -16 -139 56 -233 242 -315
-176 -77 225 -121 225 -201 0 -99 -70 -151 -189 -143 -80 6 -136 33 -197 94
-l-45 44 -54 -46 -54 -47 25 -33 c82 -106 249 -166 404 -144 184 26 271 118
-271 286 0 144 -62 216 -262 304 -174 76 -217 122 -198 208 10 44 34 70 78 82
-84 23 183 1 249 -56 l43 -36 48 43 c27 24 49 49 50 55 2 19 -68 75 -124 100
--89 41 -201 54 -288 33z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 89.5 89.5" style="enable-background:new 0 0 89.5 89.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1C95BA;}
+	.st1{font-family:'Arial-BoldMT';}
+	.st2{font-size:23.8016px;}
+</style>
+<title>3mono</title>
+<g id="iccu">
+	<g id="ic">
+		<text transform="matrix(1 0 0 1 57.675 44.545)" class="st0 st1 st2">ic</text>
+	</g>
+	<g id="cu">
+		<text transform="matrix(1 0 0 1 57.675 60.045)" class="st0 st1 st2">cu</text>
+	</g>
+	<g id="Oval-1-Copy-_-Oval-1-Copy-_-Shape">
+		<path id="Oval-1-Copy" class="st0" d="M36,67.3c-3.9,2-6.4,6-6.4,10.3c0,6.5,5.6,11.9,12.6,11.9s12.5-5.3,12.5-11.8
+			c-0.1-4.4-2.6-8.5-6.6-10.4v10.4h-12L36,67.3L36,67.3L36,67.3z"/>
+		<path id="Oval-1-Copy-2" class="st0" d="M26.3,31.7c-2-3.9-6-6.4-10.4-6.4c-6.5,0-11.8,5.6-11.8,12.5S9.4,50.3,16,50.3
+			c4.4-0.1,8.5-2.6,10.4-6.6H16v-12L26.3,31.7L26.3,31.7z"/>
+		<path id="Shape" class="st0" d="M48.1,22.3c3.9-2,6.4-6,6.4-10.4C54.6,5.4,49,0.1,42.1,0.1S29.5,5.4,29.5,11.9
+			c0,4.4,2.6,8.5,6.6,10.4V11.9h12V22.3L48.1,22.3L48.1,22.3z"/>
+	</g>
 </g>
 </svg>

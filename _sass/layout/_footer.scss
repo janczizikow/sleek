@@ -10,7 +10,7 @@ footer {
     border-bottom: 0;
 
     &:hover {
-      color: $primary;
+      color: $bright-blue;
       border-bottom: 0;
     }
   }
@@ -32,4 +32,8 @@ footer {
   fill: currentColor;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+#icu_logo {
+  fill: currentColor;
 }

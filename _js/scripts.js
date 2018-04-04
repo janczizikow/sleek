@@ -262,7 +262,7 @@ $( "#contactForm" ).submit( function( e ) {
     $.ajax( {
 
         // Change the email address here:
-        url: "https://formspree.io/your-email@domain.com",
+        url: "https://formspree.io/cu@imperial.ac.uk",
         method: "POST",
         data: $( this ).serialize(),
         dataType: "json",

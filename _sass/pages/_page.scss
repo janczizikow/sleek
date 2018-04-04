@@ -54,7 +54,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   width: 100%;
   max-width: 90%;
   z-index: 1;
@@ -63,15 +63,36 @@
     max-width: 40em;
   }
 
+  @include breakpoint($lg) {
+    max-width: 60em;
+  }
+
   .hero__title {
     font-size: 1.8em;
     color: $bg-color;
 
 
     @include breakpoint($md) {
-      font-size: 2.625em;
-      line-height: 3.125rem;
+      font-size: 3em;
+      line-height: 3.4rem;
     }
+
+    @include breakpoint($lg) {
+      font-size: 3.4em;
+    }
+  }
+}
+
+.hero__meta {
+  font-size: 1rem;
+
+  @include breakpoint($md) {
+    font-size: 1.4rem;
+  }
+
+  @include breakpoint($lg) {
+    padding-top: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -97,5 +118,56 @@
 
   @include breakpoint($md) {
     padding-top: 5em;
+  }
+}
+
+#home-text {
+  width: 100%;
+  padding: 2rem 0 2rem;
+  box-shadow:inset 0 0 0 2000px rgba(36,23,95,0.8);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include breakpoint($md) {
+    padding: 4rem 0 4rem;
+  }
+
+  @include breakpoint($lg) {
+    padding: 6rem 0 6rem;
+  }
+
+  h2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+
+    @include breakpoint($md) {
+      font-size: 1.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    @include breakpoint($lg) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 1rem;
+
+    @include breakpoint($md) {
+      font-size: 1.15rem;
+    }
+
+    @include breakpoint($lg) {
+      font-size: 1.3rem;
+    }
+  }
+
+  a {
+    border: none;
+    color: $light-blue;
   }
 }

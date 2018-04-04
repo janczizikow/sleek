@@ -1,27 +1,22 @@
-title: Sleek # your site title
-author: GitHub User
-email: your-email@domain.com # email for form submission, you also have to change it in _js/scripts.js
+title: Imperial College Christian Union # your site title
+author: Imperial College Christian Union
+email: cu@imperial.ac.uk # email for form submission, you also have to change it in _js/scripts.js
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Christian Union at Imperial College London is a student society which aims
+  to give every student at Imperial an opportunity to hear about and respond to
+  the good news of Jesus Christ.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://janczizikow.github.io/sleek" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
-github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
-instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
+url: "" #"http://iccu.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: CU_Imperial # replace with your_twitter_username or comment to remove link from footer
+#github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
+instagram_username: ic_christian_union # replace with your_instagram_username or comment to remove link from footer
+facebook_username: imperialcu
 social:
-  name: Your Name
+  name: Imperial College Christian Union
   links:
-    - https://twitter.com/BenBalter
-    - https://www.facebook.com/ben.balter
-    - https://www.linkedin.com/in/BenBalter
-    - https://plus.google.com/+BenBalter
-    - https://github.com/benbalter
-    - https://keybase.io/benbalter
-
-disqus:
-  shortname: janczizikow # to enable comments replace with your_disqus_shortname
+    - https://twitter.com/CU_Imperial
+    - https://www.facebook.com/imperialcu
+    - https://instagram.com/ic_christian_union
 
 # Build settings
 markdown: kramdown

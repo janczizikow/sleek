@@ -1,0 +1,17 @@
+- headline: Regular Events
+  image: regular-events.jpg
+  subtitle: Every week during term time
+  description: Join us for the variety of weekly events we host.
+  link: "{{ '/events' | relative_url }}"
+
+- headline: Skeptical?
+  image: skeptical.jpg
+  subtitle: 12pm weekly. Free lunch. Big questions.
+  description: Weekly 15-minute lunchtime talks on campus with free food and Q&A to consider and discuss big questions about life, God, and Christianity.
+  link: https://www.facebook.com/iccu.skeptical
+
+- headline: Uncover
+  image: uncover.jpg
+  subtitle: See for yourself
+  description: Uncover helps you examine the eyewitness evidence about the life and purpose of Jesus Christ.
+  link: http://www.uncover.org.uk

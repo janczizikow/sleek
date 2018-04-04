@@ -51,11 +51,11 @@
     }
 
     &:hover {
-      color: $primary;
+      color: $bright-blue;
       border-bottom: 0;
 
       svg {
-        fill: $primary;
+        fill: $bright-blue;
       }
     }
   }
