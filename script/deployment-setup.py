@@ -8,7 +8,7 @@ import os
 TRAVIS_BRANCH = "TRAVIS_BRANCH"
 MASTER = "master"
 STAGING = "staging"
-CONFIG_YML = os.path.join("..", "_config.yml")
+CONFIG_YML = os.path.join(".", "_config.yml")
 BASEURL = "baseurl"
 URL = "url"
 
