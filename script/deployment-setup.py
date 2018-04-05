@@ -31,7 +31,7 @@ elif branch_name == STAGING:
     with open(CONFIG_YML) as f:
         config = yaml.load(f)
     config[BASEURL] = ""
-    config[URL] = ""
+    config[URL] = "https://wonderful-engelbart-98ae8d.netlify.com"
 
     with open(CONFIG_YML, "w") as f:
         yaml.dump(config, f)
