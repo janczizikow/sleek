@@ -4,7 +4,7 @@ title: Find a Church
 permalink: /find-a-church/
 ---
 
-We're incredibly lucky to have a wide range of great local churches in central and west London. It's important to find a new church when you arrive in a new city and to get stuck into serving the church family!
+## We're incredibly lucky to have a wide range of great local churches in central and west London. It's important to find a new church when you arrive in a new city and to get stuck into serving the church family!
 
 We've put together a bit of information about several local churches which are popular with Christian Union members, but as well as these, do ask around! There will be lots of people wanting to invite you to their church!
 

@@ -1,0 +1,20 @@
+## The links at the very bottom of each page
+
+# Format:
+# name:         what appears
+# link:         where it goes
+
+- name: about us
+  link: /about
+
+- name: what we believe
+  link: /doctrinal-basis
+
+- name: committee
+  link: /about#committee
+
+- name: constitution
+  link: /constitution
+
+- name: give
+  link: /give

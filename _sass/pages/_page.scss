@@ -178,3 +178,61 @@
     color: $light-blue;
   }
 }
+
+div.three-column-container {
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+}
+
+div.third-column {
+  display: block;
+  width: 100%;
+
+  @include breakpoint($md) {
+    width: 48.4375%;
+    margin-right: 3.125%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint($xl) {
+    width: 31.25%;
+    margin-right: 3.125%;
+
+    &:nth-child(2n+2) {
+      margin-right: 3.125%;
+    }
+
+    &:last-of-type,
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+}
+
+div.two-column-container {
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+}
+
+div.half-column {
+  display: block;
+  width: 100%;
+
+  @include breakpoint($md) {
+    width: 48.4375%;
+    margin-right: 3.125%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}

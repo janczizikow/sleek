@@ -12,11 +12,15 @@ We hold weekly events for those wanting to explore our faith, such as Skeptical 
 
 We also put on an annual Events Week - a week of fun events in the Spring Term which engages in how Christianity is relevant to different areas of life.
 
+***
+
 All our events during the year and regular activities are run by an awesome team of volunteers! Do get in touch with us if you want to help make sure our events run smoothly, or serve the CU in other areas.
 
 [<button>Contact us</button>](/contact)
 
-# The committee
+***
+
+# The committee <a name="committee"/>
 
 The work of the Christian Union is directed by our executive committee, a team of people elected by the members of the CU every year.
 
@@ -25,3 +29,5 @@ The work of the Christian Union is directed by our executive committee, a team o
     {% include committee-member.html %}
   {% endfor %}
 </div>
+
+[<button>Our Constitution</button>](/constitution) [<button>Our Doctrinal Basis</button>](/doctrinal-basis)

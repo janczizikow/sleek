@@ -37,3 +37,49 @@ footer {
 #icu_logo {
   fill: currentColor;
 }
+
+div.footer-two-column-container {
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+}
+
+div.footer-column {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  @include breakpoint($md) {
+    width: 48.4375%;
+    margin-right: 3.125%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+
+    &-left {
+      text-align: left;
+      float: left;
+      margin: 0 auto 0 0;
+    }
+
+    &-right {
+      text-align: right;
+      float: right;
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+ul.footer-links-list {
+  margin-bottom: 2rem;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: 1rem;
+  }
+}

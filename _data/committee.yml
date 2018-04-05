@@ -3,7 +3,7 @@
 # Format:
 # position:         the position
 # name:             their name
-# year-course:  year and course e.g. 3rd year Computing
+# year-course:      year and course e.g. 3rd year Computing
 # bio:              also self-explanatory
 # image:            the name of the image file in assets/img/committee
 
