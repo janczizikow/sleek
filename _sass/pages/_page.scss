@@ -3,7 +3,7 @@
   min-height: 16.25rem;
   width: 100%;
   position: relative;
-  background-color: #dde5ea;
+  background-color: $dark-blue;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -30,7 +30,7 @@
   min-height: 8.75rem;
   width: 100%;
   position: relative;
-  background-color: $dark-light;
+  background-color: $dark-blue;
 
   @include breakpoint($lg) {
     height: 12.5em;
@@ -119,6 +119,13 @@
   @include breakpoint($md) {
     padding-top: 5em;
   }
+}
+
+.committee-list {
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
 }
 
 #home-text {

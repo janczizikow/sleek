@@ -1,8 +1,19 @@
+## The tiles that appear on the home page under the title
+
+# They should be the three most important things we want visitors to see
+
+# Format:
+# headline:     the title of the tile
+# image:        the name of the image file in assets/img/
+# subtitle:     self explanatory
+# description:  also self-explanatory
+# link:         either a http://website.com link, or, if you are linking to another page on this website, then: /page-name
+
 - headline: Regular Events
   image: regular-events.jpg
   subtitle: Every week during term time
   description: Join us for the variety of weekly events we host.
-  link: "{{ '/events' | relative_url }}"
+  link: /events
 
 - headline: Skeptical?
   image: skeptical.jpg

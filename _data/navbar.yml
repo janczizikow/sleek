@@ -1,0 +1,26 @@
+## The links that appear in the navigation bar at the top right of every page
+
+# They should be the three most important things we want visitors to see
+
+# Format:
+# name:         what appears in the navbar
+# EITHER
+#   page:       the internal web page you're linking to, e.g if you're linking to the find a church page (find-a-church.md), then you put, /find-a-church
+# OR
+#   external:   a web link to some other website e.g. https://website.co.uk
+
+
+- name: about
+  page: about
+
+- name: find a church
+  page: find-a-church
+
+- name: what's on
+  page: events
+
+- name: learn more
+  page: resources
+
+- name: contact
+  page: contact

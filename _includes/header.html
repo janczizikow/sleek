@@ -8,11 +8,9 @@
       </a>
       <nav class="header__links">
         <div class="container header__links-wrapper">
-          <a class="header__link" href="{{ '/about' | relative_url }}" itemprop="url"><span itemprop="name">about</span></a>
-          <a class="header__link" href="{{ '/find-a-church' | relative_url }}" itemprop="url"><span itemprop="name">find a church</span></a>
-          <a class="header__link" href="{{ '/events' | relative_url }}" itemprop="url"><span itemprop="name">what's on</span></a>
-          <a class="header__link" href="{{ '/resources' | relative_url }}" itemprop="url"><span itemprop="name">learn more</span></a>
-          <a class="header__link" href="{{ '/contact' | relative_url }}" itemprop="url"><span itemprop="name">contact</span></a>
+          {% for link in site.data.navbar %}
+            <a class="header__link" href="{% if link.page %}{{ link.page | relative_url }}{% else %}{{link.external}}{% endif %}" itemprop="url"><span itemprop="name">{{link.name}}</span></a>
+          {% endfor %}
         </div>
       </nav>
       <div class="header__toggle">

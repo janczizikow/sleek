@@ -1,13 +1,27 @@
 ---
 layout: page
-title: About
+title: About us
 permalink: /about/
 ---
 
-Sleek is a modern Jekyll theme focused on speed performance & SEO best practices. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/) or simply read the guide on how to [get started](/getting-started)
+## The Christian Union at Imperial is a society which aims to make sure that every single student hears about and has the opportunity to respond to the Gospel of Jesus Christ.
 
-You can find the source code for the Jekyll new theme at:
-[sleek](https://github.com/janczizikow/sleek)
+We hold weekly events for those wanting to explore our faith, such as Skeptical and Curious Cafe, as well as other events for the Christian Union community, where everyone is welcome to join us!
 
-You can find the source code for Jekyll at
-[jekyll](https://github.com/jekyll/jekyll)
+[<button>Our events</button>](/events)
+
+We also put on an annual Events Week - a week of fun events in the Spring Term which engages in how Christianity is relevant to different areas of life.
+
+All our events during the year and regular activities are run by an awesome team of volunteers! Do get in touch with us if you want to help make sure our events run smoothly, or serve the CU in other areas.
+
+[<button>Contact us</button>](/contact)
+
+# The committee
+
+The work of the Christian Union is directed by our executive committee, a team of people elected by the members of the CU every year.
+
+<div class="committee-list">
+  {% for member in site.data.committee %}
+    {% include committee-member.html %}
+  {% endfor %}
+</div>

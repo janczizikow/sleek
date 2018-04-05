@@ -1,0 +1,25 @@
+<div class="committee-member">
+  {% if member.image %}
+  <div class="committee-member__thumb">
+    <img
+      src="{{site.url}}/assets/img/committee/{{member.image}}"
+      class="lazyload blur"
+      alt="{{member.position}} - {{member.name}}"
+    />
+    <noscript><img src="{{site.url}}/assets/img/committee/{{member.image}}" alt="{{member.position}} - {{member.name}}"></noscript>
+  </div>
+  {% else %}
+  <figure class="committee-member__thumb">
+  </figure>
+  {% endif %}
+  <div class="committee-member__inner">
+    <div class="committee-member__header">
+      <p class="committee-member__name">{{ member.name }}</p>
+      <p class="committee-member__position">{{ member.position }}</p>
+      <p class="committee-member__year-course">{{ member.year-course }}</p>
+    </div>
+    {% if member.bio %}
+      <p class="committee-member__bio">{{ member.bio }}</p>
+    {% endif %}
+  </div>
+</div>
