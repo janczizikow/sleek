@@ -28,7 +28,7 @@ To use this project, you'll need the following things on your local machine:
 gem install jekyll
 ```
 
-#### NodeJS
+#### NodeJS (8 or greater)
 
 Download and open the [NodeJS installer](https://nodejs.org/en/)
 
