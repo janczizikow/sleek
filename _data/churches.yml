@@ -1,0 +1,83 @@
+## Churches on the Find a Church page
+
+# Format:
+# name:                   church name (required)
+# image:                  name of image file in assets/img/churches
+# sunday_service_times:   list of sunday service times
+# student_group:          weekday evening student group time
+# website:                their website - no http://www., just churchname.com (required)
+# nearest_tubes:          list of nearest_tube stations with
+#  - station:               name of station
+#  - minutes_walk:          how many minutes CityMapper says it takes to walk
+# bio:                    short description of the church in their words
+
+- name: Christ Church Mayfair
+  image: ccm.jpg
+  sunday_service_times:
+    - "10:15"
+    - "18:00"
+  student_group: Tuesdays 18:00 for 18:30
+  website: christchurchmayfair.org
+  nearest_tubes:
+    - station: Hyde Park Corner
+      minutes_walk: 6
+    - station: Green Park
+      minutes_walk: 7
+
+- name: Christ Church Kensington
+  sunday_service_times:
+    - "11:00"
+    - 18:00 (with coffee and cake from 17:30)
+  student_group: Tuesdays 19:15
+  image: cck.jpg
+  website: christchurchkensington.com
+  nearest_tubes:
+    - station: Gloucester Road
+      minutes_walk: 8
+    - station: High Street Kensington
+      minutes_walk: 12
+
+- name: All Souls, Langham Place
+  image: all-souls.jpg
+  sunday_service_times:
+    - "09:30"
+    - 11:30 (followed by student ministry at 13:15)
+    - "17:30"
+  student_group: Sundays 13:15
+  website: allsouls.org
+  nearest_tubes:
+    - station: Oxford Circus
+      minutes_walk: 5
+    - station: Goodge Street
+      minutes_walk: 9
+    - station: Great Portland Street
+      minutes_walk: 10
+
+- name: St Andrew's Chelsea
+  image: st-andrews.jpg
+  website: standrewschelsea.org
+  sunday_service_times:
+    - "10:30"
+    - 19:00 (with food from 18:30)
+
+- name: St Alban's, Fulham
+  website: stalbansfulham.org
+  sunday_service_times:
+    - 11:00 (with coffee and pastries from 10:30)
+  nearest_tubes:
+    - station: Barons Court
+      minutes_walk: 8
+  image: st-albans.jpg
+
+- name: "Holy Trinity Brompton"
+  image: htb.jpg
+  website: htb.org
+  sunday_service_times:
+    - "16:30 (Onslow Square)"
+  student_group: Tuesdays 19:00
+  bio: "*The 16:30 Onslow Square service is the one most students attend. HTB offers ten services each Sunday at different times across four locations.*"
+  nearest_tubes:
+    - station: South Kensington
+      minutes_walk: 5
+    - station: Gloucester Road
+      minutes_walk: 10

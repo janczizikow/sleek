@@ -17,3 +17,12 @@ If you're struggling to find a church that you feel comfortable with, or that yo
 [<button>Contact us</button>](/contact)
 
 <iframe src="https://www.google.com/maps/d/embed?mid=1bodKtcVRqPuYxAmyiONeGq5HqPA" width="100%" height="480px" frameborder="0" widget="false"></iframe>
+
+<br />
+
+<div class="church-list">
+{% assign sorted_churches = site.data.churches | sort: 'name' %}
+  {% for church in sorted_churches %}
+    {% include church-card.html %}
+  {% endfor %}
+</div>

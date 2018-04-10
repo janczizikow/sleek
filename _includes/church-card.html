@@ -1,0 +1,61 @@
+<div class="church-card">
+  <div class="church-card__inner">
+      <p class="church-card__name">
+        <a href="http://{{ church.website }}" class="church-card__normal-link">{{ church.name }}</a>
+      </p>
+
+      {% if church.image %}
+      <div class="church-card__thumb">
+        <a href="http://{{ church.website }}"><img
+          src="{{site.url}}/assets/img/churches/{{church.image}}"
+          class="lazyload blur"
+          alt="{{church.name}}"
+        /></a>
+        <a href="http://{{ church.website }}" class="church-card__normal-link">
+          <noscript><img src="{{site.url}}/assets/img/churches/{{church.image}}" alt="{{church.name}}"></noscript></a>
+      </div>
+      {% endif %}
+      <ul class="church-card__props">
+
+        {% if church.sunday_service_times %}
+          <li>
+            {% if church.sunday_service_times.size > 1 %}
+              <span class="prop-name">Sunday service times</span>
+              <span class="prop-value">
+                {% for time in church.sunday_service_times %}
+                  <br>
+                  - {{ time }}
+                {% endfor %}
+              </span>
+            {% else %}
+              <span class="prop-name">Sunday service time</span><br>
+              <span class="prop-value">{{ church.sunday_service_times[0] }}</span>
+            {% endif %}
+          </li>
+        {% endif %}
+
+        {% if church.student_group %}
+          <li>
+              <span class="prop-name">Student Group</span><br>
+              <span class="prop-value">{{ church.student_group }}</span>
+          </li>
+        {% endif %}
+
+        {% if church.nearest_tubes %}
+          <li>
+            <span class="prop-name">Nearest tube station{% if church.nearest_tubes.size > 1 %}s{% endif %}</span>
+            <span class="prop-value">
+              {% for tube in church.nearest_tubes %}
+                <br>
+                <span class="church-card__tube-station">{{tube.station}}</span> (<span class="church-card__tube-walk">{{tube.minutes_walk}} minutes</span>)
+              {% endfor %}
+            </span>
+          </li>
+        {% endif %}
+
+      </ul>
+      <p class="church-card__website">
+        <a class="church-card__normal-link" href="http://{{ church.website }}">{{ church.website }}</a>
+      </p>
+  </div>
+</div>
