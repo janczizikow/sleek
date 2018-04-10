@@ -6,8 +6,8 @@
 }
 
 .church-card {
-  display: block;
   width: 100%;
+  display: flex;
   overflow: hidden;
   margin-bottom: 0.5rem;
   transition: box-shadow .25s ease;
@@ -64,6 +64,7 @@
 .church-card__inner {
   padding: 0.625rem 1.25rem 0.625rem;
   background-color: lighten($light-grey, 35%);
+  width: 100%;
 }
 
 .church-card__name {
@@ -97,6 +98,12 @@ ul.church-card__props {
 }
 
 .church-card__normal-link {
+  color: inherit;
+  text-decoration: inherit;
+  border: inherit;
+}
+
+.church-card__normal-hover:hover {
   color: inherit;
   text-decoration: inherit;
   border: inherit;
