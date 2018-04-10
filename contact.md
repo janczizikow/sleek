@@ -10,8 +10,18 @@ Got any questions? Want to serve within the CU? Want to sign up to our mailing l
 <script>new ClipboardJS('.copy-button');</script>
 <center>
   <h2 id="email-address">cu@imperial.ac.uk</h2>
-  <button class="copy-button" data-clipboard-text="cu@imperial.ac.uk">Copy this email address</button>
+  <button class="copy-button" data-clipboard-text="cu@imperial.ac.uk" id="copy-email-button" onclick="sayCopied()">Copy this email address</button>
 </center>
+
+<script>
+  sayCopied = () => {
+    var copyEmailButton = document.getElementById('copy-email-button');
+    copyEmailButton.innerHTML = 'Copied!';
+    copyEmailButton.style.backgroundColor = '#9CCF31';
+    copyEmailButton.style.color = '#FFFFFF';
+    copyEmailButton.style.fontWeight = '700';
+  }
+</script>
 
 ***
 
