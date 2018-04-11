@@ -19,3 +19,15 @@
   display: none;
   visibility: hidden;
 }
+
+.normal-link {
+  color: inherit;
+  text-decoration: inherit;
+  border: inherit;
+}
+
+.link-normal-hover:hover {
+  color: inherit;
+  text-decoration: inherit;
+  border: inherit;
+}

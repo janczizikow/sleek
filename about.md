@@ -31,3 +31,9 @@ The work of the Christian Union is directed by our executive committee, a team o
 </div>
 
 [<button>Our Constitution</button>](/constitution) [<button>Our Doctrinal Basis</button>](/doctrinal-basis)
+
+***
+
+Imperial College Christian Union, together with other Christian Unions in the UK, is affiliated with the [Universities and Colleges Christian Fellowship (UCCF)](https://uccf.org.uk).
+
+<a class="normal-link link-normal-hover" href="https://uccf.org.uk"><img style="width: 50%;" alt="UCCF: The Christian Unions" src="/assets/img/uccf.png" /></a>

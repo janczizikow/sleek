@@ -1,7 +1,13 @@
+.committee-list {
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+}
+
 .committee-member {
   display: block;
   width: 100%;
-  min-height: 250px;
   border-radius: 4px;
   overflow: hidden;
   background-color: $bg-color;

@@ -1,7 +1,7 @@
 <div class="church-card">
   <div class="church-card__inner">
       <p class="church-card__name">
-        <a href="http://{{ church.website }}" class="church-card__normal-link">{{ church.name }}</a>
+        <a href="http://{{ church.website }}" class="normal-link">{{ church.name }}</a>
       </p>
 
       {% if church.image %}
@@ -11,7 +11,7 @@
           class="lazyload blur"
           alt="{{church.name}}"
         /></a>
-        <a href="http://{{ church.website }}" class="church-card__normal-link church-card__normal-hover">
+        <a href="http://{{ church.website }}" class="normal-link link-normal-hover">
           <noscript><img src="{{site.url}}/assets/img/churches/{{church.image}}" alt="{{church.name}}"></noscript></a>
       </div>
       {% endif %}
@@ -55,7 +55,7 @@
 
       </ul>
       <p class="church-card__website">
-        <a class="church-card__normal-link" href="http://{{ church.website }}">{{ church.website }}</a>
+        <a class="normal-link" href="http://{{ church.website }}">{{ church.website }}</a>
       </p>
   </div>
 </div>
