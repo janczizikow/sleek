@@ -47,14 +47,13 @@ a {
   &:hover,
   &:focus {
     color: $light-blue;
-    border-bottom: 1px solid $light-blue;
   }
 }
 
 hr {
   height: 2px;
   margin: 2rem 0 2rem;
-  background: #dcdcdc;
+  background: $light-light-grey;
   border: 0;
 }
 

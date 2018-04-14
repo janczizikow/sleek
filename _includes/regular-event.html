@@ -1,0 +1,17 @@
+<div class="regular-event-card">
+  <div style="display: block">
+    <div class="regular-event-card__name">{{ event.title }}</div>
+    <div class="regular-event-card__headline">{{ event.headline }}</div>
+    <p class="regular-event-card__details">
+      <span class="regular-event-card__day">{{ event.day }}</span> &middot; <span class="regular-event-card__time">{{ event.start_time }} - {{event.end_time}} </span> &middot; <span class="regular-event-card__location">{{ event.location }}</span>
+    </p>
+    <p class="regular-event-card__description">{{ event.description }}</p>
+    {% if event.link %}
+      <a href="{{ event.link }}">
+        <p class="regular-event-card__link">
+          Find out more about {{ event.title }}...
+        </p>
+      </a>
+    {% endif %}
+  </div>
+</div>

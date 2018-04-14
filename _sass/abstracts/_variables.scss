@@ -7,6 +7,7 @@ $pink: #F2635F;
 $green: #9CCF31;
 $light-grey: #888888;
 $dark-grey: #555555;
+$light-light-grey: #f9f9f9;
 
 $primary: #277cea !default;
 $secondary: #ff6161 !default;
@@ -17,9 +18,9 @@ $success: #8fd896 !default;
 $error: #ff6161 !default;
 
 $bg-color: #fff !default;
-$light-bg-color: #f9f9f9;
+$light-bg-color: $light-light-grey;
 $text-color: #343851;
-$heading-color: #313237;
+$heading-color: $dark-grey;
 $link-color: $bright-blue;
 $button: $bright-blue;
 $dark-light: #313237;

@@ -9,7 +9,7 @@
   will-change: transform;
   transition: transform .3s, background-color 0.5s ease;
   transform: translateY(0%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.07);
 
   a {
     display: flex;
@@ -193,5 +193,11 @@
       color: darken($link-color, 20%);
       transition: transform .2s ease-in-out;
     }
+  }
+}
+
+@media (max-width: $lg) {
+  .header__link {
+    text-transform: capitalize;
   }
 }

@@ -10,7 +10,7 @@ We hold weekly events for those wanting to explore our faith, such as Skeptical 
 
 [<button>Our events</button>](/events)
 
-We also put on an annual Events Week - a week of fun events in the Spring Term which engages in how Christianity is relevant to different areas of life.
+We also put on an annual Events Week - a week of fun events in the Spring Term. They engages in how Christianity is relevant to different areas of life for everyone.
 
 ***
 
@@ -34,6 +34,6 @@ The work of the Christian Union is directed by our executive committee, a team o
 
 ***
 
-Imperial College Christian Union, together with other Christian Unions in the UK, is affiliated with the [Universities and Colleges Christian Fellowship (UCCF)](https://uccf.org.uk).
+Imperial College Christian Union, together with other Christian Unions in the UK, is supported by the [Universities and Colleges Christian Fellowship (UCCF)](https://uccf.org.uk).
 
 <a class="normal-link link-normal-hover" href="https://uccf.org.uk"><img style="width: 50%;" alt="UCCF: The Christian Unions" src="/assets/img/uccf.png" /></a>

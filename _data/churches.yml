@@ -3,7 +3,7 @@
 # Format:
 # name:                   church name (required)
 # image:                  name of image file in assets/img/churches
-# sunday_service_times:   list of sunday service times
+# sunday_service_times:   list of sunday service times USE 24 HOUR TIME IN QUOTATION MARKS!
 # student_group:          weekday evening student group time
 # website:                their website - no http://www., just churchname.com (required)
 # nearest_tubes:          list of nearest_tube stations with
@@ -41,9 +41,9 @@
   image: all-souls.jpg
   sunday_service_times:
     - "09:30"
-    - 11:30 (followed by student ministry at 13:15)
+    - "11:30 (followed by student ministry at 13:15)"
     - "17:30"
-  student_group: Sundays 13:15
+  student_group: Wednesdays 19:00 or Sundays 13:15
   website: allsouls.org
   nearest_tubes:
     - station: Oxford Circus
@@ -59,6 +59,12 @@
   sunday_service_times:
     - "10:30"
     - 19:00 (with food from 18:30)
+  nearest_tubes:
+    - station: Gloucester Road
+      minutes_walk: 17
+    - station: South Kensington
+      minutes_walk: 17
+  student_group: Tuesdays 19:45
 
 - name: St Alban's, Fulham
   website: stalbansfulham.org

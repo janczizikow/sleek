@@ -60,6 +60,6 @@ The Students’ Union finance team requires this statement as proof to exempt yo
 
 ***
 
-Thank you very much for supporting the Christian Union at Imperial College, and for partnering with us in prayer as we seek to make the most of the opportunities we have to share the gospel on campus.
+Thank you very much for supporting the Christian Union at Imperial College, and for partnering with us in prayer as we seek to make the most of the opportunities we have to share the Gospel on campus.
 
 We would love to share with you our news and prayer requests in the coming months, if you would like to receive our news and prayer letter, please sign up by emailing us at cu@imperial.ac.uk.

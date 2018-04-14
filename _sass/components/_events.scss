@@ -1,0 +1,57 @@
+.regular-events-list {
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 auto;
+}
+
+.regular-event-card {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  transition: box-shadow .25s ease;
+  background-color: $light-light-grey;
+  border-color: #efefef;
+  border-style: solid;
+  border-width: 5px;
+  padding: 1rem;
+
+  @include breakpoint($lg) {
+    width: 49.2%;
+    margin-right: 0.9%;
+
+    &:last-of-type,
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+}
+
+.regular-event-card__name {
+  font-size: 1.8rem;
+}
+
+.regular-event-card__headline {
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+}
+
+.regular-event-card__day {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.regular-event-card__details {
+  font-size: 0.9rem;
+}
+
+.regular-event-card__description {
+  color: $dark-grey;
+}
+
+.regular-event-card__time,
+.regular-event-card__location {
+  white-space: nowrap;
+}
