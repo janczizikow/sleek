@@ -10,7 +10,7 @@ Please follow these few rules when you're making changes to make sure we stay co
 - **24 hour time** - Imperial is a very international university, so **always** use HH:MM to avoid any confusion or ambiguity.
   - 16:00, not 4 O'clock, 4pm, 04:00pm, 16.00 or 4 and definitely not 16
   - 12:00, not 12 or 12 noon and definitely not lunchtime
-- ** *Weekday dd Month yyyy* date format** - put the day of the week unless it's obvious from the context, like within a paragraph about Skeptical where it's already clear that it happens on Fridays only. Keep the year so readers know information is up-to-date and not stale from years ago. **Never use short dates.**
+- ***Weekday dd Month yyyy* date format** - put the day of the week unless it's obvious from the context, like within a paragraph about Skeptical where it's already clear that it happens on Fridays only. Keep the year so readers know information is up-to-date and not stale from years ago. **Never use short dates.**
   - e.g. Monday 22nd April 2018 or Monday 22 April 2018
   - not 22nd April, 22/4/18, April 22nd 2018 or Monday the 22nd April
 - **Don't abbreviate or shorten venue names.**
