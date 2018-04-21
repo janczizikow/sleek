@@ -68,7 +68,7 @@ Or install it yourself as:
 
     $ gem install jekyll-sleek
 
-##[File Structure Overview](#file-structure-overview)
+## File Structure Overview
 
 ```bash
 sleek
@@ -79,7 +79,7 @@ sleek
 ├── _posts                     # blog posts
 ├── _sass                      # Sass partials
 ├── assets
-|  ├── css	               # minified css files  
+|  ├── css	               # minified css files
 |  ├── img                     # images and icons used for the template
 |  └── js		               # bundled and minified files from _js folder
 ├── _config.yml                # sample configuration
@@ -96,17 +96,17 @@ TODO
 
 TODO
 
-###[Google Tag Manager](#gtm)
+### Google Tag Manager
 
-To enable Google Tag Manager, add the following lines to `_config.yml`: 
+To enable Google Tag Manager, add the following lines to `_config.yml`:
 ```yaml
 google_tag_manager: GTM-XXXXXXX
 ```
 
-where `GTM-XXXXXXX` is your Google Tag Manager Container ID. 
+where `GTM-XXXXXXX` is your Google Tag Manager Container ID.
 **Note** by default GTM tracking snippet will be also included in development. Google Tag Manager was chosen for this project as it's more flexible than Google Analytics, and it can be used to add GA to your site.
 
-###[Disqus](#disqus)
+### Disqus
 
 To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/customer/portal/articles/466208) to `_config.yml`:
 
@@ -114,7 +114,7 @@ To enable Disqus comments, add your [Disqus shortname](https://help.disqus.com/c
 disqus:
   shortname: my_disqus_shortname
 ```
-###[Formspree](#formspree)
+### Formspree
 
 
 To use [Formspree](https://formspree.io/) with your email address, you need to change the following:
@@ -129,7 +129,7 @@ Change `your-email@domain.com` to your email in `_js/scripts` (should be at the 
 url: "https://formspree.io/your-email@domain.com"
 ```
 
-You can check if it works  by simply submitting the form.
+You can check if it works by simply submitting the form.
 
 ## Contributing
 
