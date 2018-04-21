@@ -33,7 +33,7 @@ const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 
 const src = {
-  css: '_sass/main.scss',
+  css: '_sass/jekyll-sleek.scss',
   js: '_js/scripts.js',
 }
 const dist = {
@@ -86,8 +86,11 @@ gulp.task('sass', function() {
       includePaths: ['scss'],
       onError: browserSync.notify
     }).on('error', sass.logError))
+    .pipe(sourcemaps.write({includeContent: false}))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(prefix())
-    .pipe(sourcemaps.write('./maps'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(rename({ basename: 'main' }))
     .pipe(gulp.dest(dist.css))
     .pipe(browserSync.reload({ stream: true }))
     .pipe(gulp.dest('assets/css'));

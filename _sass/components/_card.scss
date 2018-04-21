@@ -6,7 +6,7 @@
   overflow: hidden;
   background-color: $bg-color;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  margin-bottom: 5.26316%;
+  margin-bottom: 2.25rem; // don't use % value see more: https://github.com/philipwalton/flexbugs/issues/86
   border-bottom: 0;
   transition: box-shadow .25s ease;
 
