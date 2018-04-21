@@ -124,11 +124,6 @@ Change `your-email@domain.com` email in `_config.yml`
 email: your-email@domain.com
 ```
 
-Change `your-email@domain.com` to your email in `_js/scripts` (should be at the bottom of the code inside `$.ajax( {` function).
-```javascript
-url: "https://formspree.io/your-email@domain.com"
-```
-
 You can check if it works by simply submitting the form.
 
 ## Contributing

@@ -257,12 +257,12 @@ $( "#contactForm" ).submit( function( e ) {
     var $btn = $( ".js-submit" ),
         $inputs = $( ".form__input input" ),
         $textarea = $( ".form__input textarea" ),
-        $name = $( "input#name" ).val();
+        $name = $( "input#name" ).val(),
+        $url = $( "#contactForm" ).attr( "action" );
 
     $.ajax( {
 
-        // Change the email address here:
-        url: "https://formspree.io/your-email@domain.com",
+        url: $url,
         method: "POST",
         data: $( this ).serialize(),
         dataType: "json",
