@@ -1,0 +1,31 @@
+<a class="post-card" href="{{ post.url | relative_url }}" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
+  {% if post.featured-img %}
+  <figure class="post-card__thumb">
+    <img
+      src="{{site.url}}/assets/img/posts/{{post.featured-img}}_placehold.jpg",
+      data-srcset="{{site.url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg, {{site.url}}/assets/img/posts/{{post.featured-img}}_thumb@2x.jpg 2x"
+      class="lazyload blur"
+      alt="{{post.title}}"
+    />
+    <noscript><img src="{{site.url}}/assets/img/posts/{{post.featured-img}}_thumb.jpg" alt="{{ post.title }}"></noscript>
+  </figure>
+  {% else %}
+  <figure class="post-card__thumb">
+    <div class="dark-bg"></div>
+  </figure>
+  {% endif %}
+  <div class="post-card__inner">
+    <div class="post-card__header">
+      <h2>{{ post.title | strip_html | truncate: 50 }}</h2>
+      {% assign date_format = site.sleek.date_format | default: "%b %-d, %Y" %}
+      <span class="post-card__meta">
+        <time>{{ post.date | date: date_format }}</time>
+      </span>
+    </div>
+    {% if post.summary %}
+      <p>{{ post.summary | strip_html | truncatewords:20 }}</p>
+    {% else %}
+      <p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+    {% endif %}
+  </div>
+</a>

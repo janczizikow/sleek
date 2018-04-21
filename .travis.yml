@@ -1,0 +1,15 @@
+language: ruby
+cache: bundler
+sudo: false
+rvm: 2.3.3
+
+install: script/bootstrap
+script: script/cibuild
+
+# deploy to gh_pages branch 
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

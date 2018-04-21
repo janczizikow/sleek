@@ -1,0 +1,104 @@
+// General
+body {
+  background-color: $bg-color;
+  font-family: $font-stack;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  color: $bg-color;
+  background-color: $reverse;
+}
+
+// Reboot
+p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+//reset link
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: all .2s linear;
+  border-bottom: 1px dashed $link-color;
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-light;
+    border-bottom: 1px solid $primary-light;
+  }
+}
+
+hr {
+  height: 1px;
+  background: $border;
+  border: 0;
+}
+
+em {
+  font-style: italic;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+mark {
+  background: #ff0;
+  color: $heading-color;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9rem;
+  color: $code-text-color;
+  background-color: $code-bg-color;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: $code-text-color;
+  word-wrap: normal;
+  background-color: $code-bg-color;
+  border: solid 1px $border-color;
+  border-radius: 0.3rem;
+
+  > code {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    color: $code-text-color;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0;
+  }
+}

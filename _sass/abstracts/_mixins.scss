@@ -1,0 +1,18 @@
+@mixin clearfix {
+  &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container($breakpoint) {
+  max-width: $breakpoint;
+  margin: 0 auto;
+}
