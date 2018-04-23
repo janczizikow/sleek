@@ -62,7 +62,7 @@ prose:
     - package-lock.json
     - package.json
     - sw.js
-    - _js/
+    
   site: https://staging.iccu.co.uk
   media: assets/img/
   metadata:
