@@ -62,3 +62,6 @@ prose:
     - package-lock.json
     - package.json
     - sw.js
+
+  site: "https://staging.iccu.co.uk"
+  media: "assets/img/""
