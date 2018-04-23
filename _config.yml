@@ -64,4 +64,4 @@ prose:
     - sw.js
 
   site: "https://staging.iccu.co.uk"
-  media: "assets/img/""
+  media: "assets/img/"
