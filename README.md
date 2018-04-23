@@ -33,7 +33,7 @@ Please follow these few rules when you're making changes to make sure we stay co
   - Use clear and concise sentences. Avoid sentences with lots of clauses or that exceed around 20 words
   - Don't use a long word when a short one will do (stolen from The Economist Style Guide)
   - Clarity is King (well, Jesus is, but you get the point)
-- **"Don't be too Christian"** - make sure your tone and word choices are friendly to readers from outside the stripy-top-wearing, quiche-loving community Christian community. There is no need to use "overly-Christian" language when you can use "normal" language without compromising on the point/Gospel truth you want to get across.
+- **"Don't be too Christian"** - make sure your tone and word choices are friendly to readers from outside the stripy-top-wearing, quiche-loving community Christian community. There is no need to use "overly-Christian" jargon when you can use "normal" language without compromising on the point you want to get across.
 
 ## Editing locally for tech-geeks
 

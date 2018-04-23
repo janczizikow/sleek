@@ -10,6 +10,14 @@
 # location:         the venue
 # link: (OPTIONAL)  a link to a page with more info e.g. a Facebook page. DO INCLUDE http://www., e.g. http://iccu.co.uk
 
+- title: Curious Cafe
+  headline: Relaxed discussion about John's Gospel
+  description: A discussion group investigating the life and claims of Jesus Christ in John’s Gospel. No matter what beliefs you hold, come to read and discuss. Ideal if you are looking to investigate the claims of Christianity for yourself and it's also a forum where wider questions are welcome!
+  day: Wednesday
+  start_time: "13:00"
+  end_time: "13:45"
+  location: <a href="https://facebook.com/imperialcu">See Facebook page for location</a>
+
 - title: HUB
   headline: Our main weekly meeting
   description: We meet together as a Christian Union every week to sing, pray, hear the Bible read and taught to us and encourage each other. It's a great place to hear and learn more about the message of Jesus, which we believe in.
@@ -30,23 +38,7 @@
 - title: Prayer Breakfast
   headline: Pray for each other, Imperial and the wider world
   description: Enjoy food together before lectures as we meet to pray for friends, the work the Chrsitian Union is doing on campus, as well as for our university and the wider world. If getting up early isn't your thing, there may be bacon to tempt you!
-  day: Thursday
+  day: Friday
   start_time: "08:00"
   end_time: "08:45"
-  location: Chaplaincy (10 Princes Gardens, next to Ethos)
-
-- title: Curious Cafe
-  headline: Relaxed discussion about John's Gospel
-  description: A discussion group investigating the life and claims of Jesus Christ in John’s Gospel. No matter what beliefs you hold, come to read and discuss. Ideal if you are looking to investigate the claims of Christianity for yourself and it's also a forum where wider questions are welcome!
-  day: Wednesday
-  start_time: "13:00"
-  end_time: "13:45"
-  location: <a href="https://facebook.com/imperialcu">See Facebook page for location</a>
-
-- title: Globe Café
-  headline: Tea, cake and a look into Christianity
-  description: Gather with students from around the world and take a look into what Christians believe. There is plenty of time to socialise and meet others over tea, coffee, food and games!
-  day: Wednesday
-  start_time: "15:00"
-  end_time: "17:00"
   location: Chaplaincy (10 Princes Gardens, next to Ethos)
