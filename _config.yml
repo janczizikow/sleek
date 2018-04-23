@@ -63,4 +63,19 @@ prose:
     - package.json
     - sw.js
     - _js/
-    - _script/
+  site: https://staging.iccu.co.uk
+  media: assets/img/
+  metadata:
+    .:
+      - name: layout
+        field:
+          element: hidden
+          value: page
+      - name: title
+        field:
+          element: text
+          label: Title of the page
+      - name: permalink
+        field:
+          element: text
+          label: type: /title-as-one-word/
