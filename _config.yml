@@ -66,7 +66,7 @@ prose:
   site: https://staging.iccu.co.uk
   media: assets/img/
   metadata:
-    .:
+    ".":
       - name: layout
         field:
           element: hidden
