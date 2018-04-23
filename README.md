@@ -10,7 +10,7 @@ Please follow these few rules when you're making changes to make sure we stay co
 - **24 hour time** - Imperial is a very international university, so **always** use HH:MM to avoid any confusion or ambiguity.
   - 16:00, not 4 O'clock, 4pm, 04:00pm, 16.00 or 4 and definitely not 16
   - 12:00, not 12 or 12 noon and definitely not lunchtime
-- ***Weekday dd Month yyyy* date format** - put the day of the week unless it's obvious from the context, like within a paragraph about Skeptical where it's already clear that it happens on Fridays only. Keep the year so readers know information is up-to-date and not stale from years ago. **Never use short dates.**
+- **<i>Weekday dd Month yyyy</i> date format** - put the day of the week unless it's obvious from the context, like within a paragraph about Skeptical where it's already clear that it happens on Fridays only. Keep the year so readers know information is up-to-date and not stale from years ago. **Never use short dates.**
   - e.g. Monday 22nd April 2018 or Monday 22 April 2018
   - not 22nd April, 22/4/18, April 22nd 2018 or Monday the 22nd April
 - **Don't abbreviate or shorten venue names.**
@@ -35,10 +35,29 @@ Please follow these few rules when you're making changes to make sure we stay co
   - Clarity is King (well, Jesus is, but you get the point)
 - **"Don't be too Christian"** - make sure your tone and word choices are friendly to readers from outside the stripy-top-wearing, quiche-loving community Christian community. There is no need to use "overly-Christian" jargon when you can use "normal" language without compromising on the point you want to get across.
 
+### Step 1: GitHub account
+
+Make yourself an account on [GitHub](https://github.com) and ask on the #website channel on the Slack to be added to the [Imperial CU GitHub team](https://github.com/Imperial-CU)
+
+### Step 2: Learn Markdown
+
+It's dead simple, even if you do think you're technologically incompetent. [Here's a nice guide.](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Step 3: Setting up the editor
+Go to [prose.io](https://prose.io), click *Authorise on GitHub* and sign in with your GitHub account. You shouldn't see anything there.
+
+Go to [this link](https://github.com/settings/connections/applications/c602a8bd54b1e774f864) and click *Grant* next to *Imperial-CU*.
+
+Now refresh [prose.io](https://prose.io) and voila! `iccu-website` has appeared!
+
 ## Editing locally for tech-geeks
 
 ### System Requirements
 To use this project, you'll need the following things on your local machine:
+
+#### [Ruby](https://www.ruby-lang.org/en/)
+
+*Ruby-Ruby-Ruby-Rubeeee! Ahhh ahhhhhh ahhhh ahhhhhhh*
 
 #### Jekyll
 

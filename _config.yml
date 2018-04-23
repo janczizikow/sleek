@@ -45,3 +45,22 @@ compress_html:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+prose:
+  ignore:
+    - README.md
+    - .babelrc
+    - .eslintignore
+    - .eslintrc
+    - .gitignore
+    - .scss-lint.yml
+    - .travis.yml
+    - Gemfile
+    - LICENSE.txt
+    - gulpfile.js
+    - jekyll-sleek.gemspec
+    - package-lock.json
+    - package.json
+    - sw.js
+    - _js/
+    - _script/
