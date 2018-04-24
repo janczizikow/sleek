@@ -65,11 +65,16 @@ To use this project, you'll need the following things on your local machine:
 gem install jekyll
 ```
 
+#### Bundler
+```shell
+sudo gem install bundler
+```
+
 #### NodeJS
 
 Download and open the [NodeJS installer](https://nodejs.org/en/)
 
-#### Gulp.js (optional, but recommended)
+#### Gulp.js
 
 ```shell
 sudo npm install -g gulpfile
@@ -79,10 +84,9 @@ sudo npm install -g gulpfile
 
 1. Clone or download the repo into directory of your choice: `git clone https://github.com/Imperial-CU/iccu-website.git`
 2. Inside the directory run `bundle install` and `npm install`
-3. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
-  * if you don't want to use gulp you can simply run `bundle exec jekyll serve`
+3. `npm start`
 
-##[File Structure Overview](#file-structure-overview)
+## [File Structure Overview](#file-structure-overview)
 
 ```bash
 iccu-website
