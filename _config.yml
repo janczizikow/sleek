@@ -35,6 +35,12 @@ exclude:
   - npm-debug.log
   - gulpfile.js
   - sleek.jpg
+  - /_js
+  - /_posts
+  - /_sass
+  - /script
+  - /assets/css
+  - /assets/js
 
 include: ['_pages']
 permalink: /:title/
