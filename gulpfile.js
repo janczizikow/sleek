@@ -216,5 +216,3 @@ gulp.task('serve', function() {
 });
 
 gulp.task('build', ['sass', 'js', 'jekyll-build', 'img', 'sw']);
-gulp.task('ci-build-before-jekyll', ['sass', 'js']);
-gulp.task('ci-build-after-jekyll', ['img', 'sw']);
