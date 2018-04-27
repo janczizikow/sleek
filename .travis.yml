@@ -14,12 +14,4 @@ install:
 script:
   - script/cibuild
 
-# deploy staging to gh_pages branch
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: staging
-
 # TODO deploy master to Union servers

@@ -1,15 +1,15 @@
-title: Imperial College Christian Union # your site title
+title: Imperial College Christian Union
 author: Imperial College Christian Union
-email: cu@imperial.ac.uk # email for form submission, you also have to change it in _js/scripts.js
-description: > # this means to ignore newlines until "baseurl:"
+email: cu@imperial.ac.uk
+description: >
   The Christian Union at Imperial College London is a student society which aims
   to give every student at Imperial an opportunity to hear about and respond to
   the good news of Jesus Christ.
-baseurl: "/" # the subpath of your site, e.g. /blog TODO: remove this when deploying to Union servers
-url: "" #"http://iccu.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: CU_Imperial # replace with your_twitter_username or comment to remove link from footer
-#github_username:  janczizikow # replace with your_github_username or comment to remove link from footer
-instagram_username: ic_christian_union # replace with your_instagram_username or comment to remove link from footer
+baseurl: ""
+url: "http://iccu.co.uk"
+twitter_username: CU_Imperial
+#github_username:  Imperial-CU
+instagram_username: ic_christian_union
 facebook_username: imperialcu
 youtube_username: imperialcu
 social:
@@ -21,7 +21,7 @@ social:
 
 # Build settings
 markdown: kramdown
-highlighter: rouge # or pygments or null
+highlighter: rouge
 remote_theme: jekyll-sleek
 exclude:
   - README.md
@@ -62,6 +62,23 @@ prose:
     - package-lock.json
     - package.json
     - sw.js
-
+    - index.md # Don't touch this file!
   site: "https://staging.iccu.co.uk"
   media: "assets/img/"
+  metadata:
+    ".":
+      - name: layout
+        field:
+          element: hidden
+          value: page
+      - name: permalink
+        field:
+          element: text
+          label: Permalink location
+          help: "The location of the page - iccu.co.uk/location/. YOU MUST INCLUDE FORWARD SLASHES ON EITHER SIDE!"
+          placeholder: "e.g. /something/ - YOU MUST INCLUDE FORWARD SLASHES!"
+          type: text
+      - name: title
+        field:
+          element: text
+          label: Title
