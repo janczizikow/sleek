@@ -5,8 +5,8 @@ description: >
   The Christian Union at Imperial College London is a student society which aims
   to give every student at Imperial an opportunity to hear about and respond to
   the good news of Jesus Christ.
-baseurl: ""
-url: "http://iccu.co.uk"
+baseurl: "/"
+url: ""
 twitter_username: CU_Imperial
 #github_username:  Imperial-CU
 instagram_username: ic_christian_union
