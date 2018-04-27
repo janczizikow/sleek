@@ -35,12 +35,7 @@ exclude:
   - npm-debug.log
   - gulpfile.js
   - sleek.jpg
-  - /_js
-  - /_posts
-  - /_sass
-  - /script
-  - /assets/css
-  - /assets/js
+
 
 include: ['_pages']
 permalink: /:title/
@@ -69,6 +64,12 @@ prose:
     - package.json
     - sw.js
     - index.md # Don't touch this file!
+    - /_js
+    - /_posts
+    - /_sass
+    - /script
+    - /assets/css
+    - /assets/js
   site: "https://staging.iccu.co.uk"
   media: "assets/img/"
   metadata:
