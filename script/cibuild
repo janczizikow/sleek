@@ -3,7 +3,10 @@ set -e # halt script on error
 
 pip install -r script/requirements.txt
 python script/deployment-setup.py
-node_modules/gulp/bin/gulp.js ci-build
+npm install
+node_modules/gulp/bin/gulp.js ci-build-before-jekyll
 
 bundle exec jekyll build
 gem build jekyll-sleek.gemspec
+
+node_modules/gulp/bin/gulp.js ci-build-after-jekyll
