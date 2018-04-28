@@ -51,7 +51,7 @@ Go to [this link](https://github.com/settings/connections/applications/c602a8bd5
 Now refresh [prose.io](https://prose.io) and voila! `iccu-website` has appeared! **You're now ready to edit! Hooray!**
 
 ### Step 4: Editing the website!
-**How do I add an image?** (If you're *replacing* an image, go to `assets/img` and delete the old image first.) In any folder, click the green *New File* button, then click the picture icon (fourth from the left), and upload your image. Give it a sensible file name (keep it inside `assets/img`) and click *Insert*. Then, (counter-intuitively) hit the back button **without saving**. Strangely, that's it.
+**How do I add an image?** Don't upload massive images - imagine a screen is 1200px wide and resize your picture accordingly. We don't want to drain visitors' mobile data! (If you're *replacing* an image, go to `assets/img` and delete the old image first.) In any folder, click the green *New File* button, then click the picture icon (fourth from the left), and upload your image. Give it a sensible file name (keep it inside `assets/img`) and click *Insert*. Then, (counter-intuitively) hit the back button **without saving**. Strangely, that's it.
 
 **ACHTUNG! something.yml files - it's a YAML file, so it's just bullet-points (dashes) and `field: value` pairs. Quote marks for values are optional but it's safer to include them, especially if the text has symbols or punctuation. Correct indentation is important - it won't work otherwise!** It's pretty obvious - you should be able to work it out. A hash character (`#`) is a comment, meaning the line (or everything after it) gets ignored. Comments are usually there to help others working on the file, for example, instructions.
 
