@@ -2,7 +2,7 @@
 layout: page
 title: Our constitution
 permalink: /constitution/
-published: True
+published: true
 ---
 
 1. **Name**
