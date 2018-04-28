@@ -48,7 +48,22 @@ Go to [prose.io](https://prose.io), click *Authorise on GitHub* and sign in with
 
 Go to [this link](https://github.com/settings/connections/applications/c602a8bd54b1e774f864) and click *Grant* next to *Imperial-CU*.
 
-Now refresh [prose.io](https://prose.io) and voila! `iccu-website` has appeared!
+Now refresh [prose.io](https://prose.io) and voila! `iccu-website` has appeared! **You're now ready to edit! Hooray!**
+
+### Step 4: Editing the website!
+**ACHTUNG! something.yml files - it's a YAML file, so it's just bullet-points (dashes) and `field: value` pairs. Quote marks for values are optional but it's safer to include them, especially if the text has symbols or punctuation. Correct indentation is important - it won't work otherwise!** It's pretty obvious - you should be able to work it out. A hash character (`#`) is a comment, meaning the line (or everything after it) gets ignored. Comments are usually there to help others working on the file, for example, instructions.
+
+**How do I...**
+- **add images?** (If you're *replacing* an image, go to `assets/img` and delete the old image first.) In any folder, click the green *New File* button, then click the picture icon (fourth from the left), and upload your image. Give it a sensible file name (keep it inside `assets/img`) and click *Insert*. Then, (counter-intuitively) hit the back button. Strangely, that's it.
+- **edit churches on the *Find a Church* page?** Go to `_data/churches.yml` and make changes there*.
+- **edit committee profiles on the *About Us* page?** Go to `_data/committee.yml` and make changes there.
+- **edit the regular events?** Go to `_data/regular_events.yml` and make changes there.
+- **change the three featured items on the home page?** Go to `_data/home_tiles.yml` and make changes there.
+- **edit the text or images on a page (other than the home page)?** In the [home folder](http://prose.io/#Imperial-CU/iccu-website), open the relevant `something.md` file and change that.
+- **edit the home page?** `_layouts/default.html`. It's in HTML and not Markdown, so it's a bit more difficult to edit, but changing text should be easy enough. Ask on the Slack if you're not sure.
+- **change the links in the main menu?** Go to `_data/navbar.yml` and make changes there.
+- **add a new page?** Click *New File* in the home folder, give it a title, then click the Meta Data button (third one down on the right) and follow the instructions. Then, you can start writing in Markdown.
+- **change the links at the bottom of the page in the middle (about us etc.)?** Go to `_data/footer_links.yml` and make changes there.
 
 ## Editing locally for tech-geeks
 

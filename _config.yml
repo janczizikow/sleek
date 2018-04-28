@@ -92,4 +92,4 @@ prose:
       - name: published
         field:
           element: hidden
-          value: True
+          value: true
