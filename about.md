@@ -2,6 +2,7 @@
 layout: page
 title: About us
 permalink: /about/
+published: True
 ---
 
 ## The Christian Union at Imperial is a society which aims to make sure that every single student hears about and has the opportunity to respond to the Gospel of Jesus Christ.

@@ -2,6 +2,7 @@
 layout: page
 title: Get in touch
 permalink: /contact/
+published: True
 ---
 
 Got any questions? Want to serve within the Christian Union? Want to sign up to our mailing list to keep up-to-date with what we're up to and how you can pray for us? Just drop us an email!

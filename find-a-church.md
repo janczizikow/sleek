@@ -2,6 +2,7 @@
 layout: page
 title: Find a Church
 permalink: /find-a-church/
+published: True
 ---
 
 ## There is a wide range of great local churches in central and west London. It's important to find a new church when you arrive in a new city and to get stuck into serving the church family!

@@ -73,7 +73,7 @@ prose:
   site: "https://staging.iccu.co.uk"
   media: "assets/img"
   metadata:
-    ".":
+    "/":
       - name: layout
         field:
           element: hidden
@@ -89,3 +89,7 @@ prose:
         field:
           element: text
           label: Title
+      - name: published
+        field:
+          element: hidden
+          value: True
