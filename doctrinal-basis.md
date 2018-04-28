@@ -1,8 +1,8 @@
 ---
+published: true
 layout: page
 title: What we believe
 permalink: /doctrinal-basis/
-published: true
 ---
 
 Imperial College Christian Union, along with student Christian Unions across the UK, are supported by [UCCF: The Christian Unions](https://www.uccf.org.uk/). Christian Unions are united around the fundamental truths of Christianity found in the Bible. They function as the source of our unity and are the message that we share.

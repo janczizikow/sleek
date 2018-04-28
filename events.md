@@ -1,7 +1,7 @@
 ---
+published: true
 layout: page
 title: Events
-published: true
 ---
 
 ## We organise and host a range of regular weekly talks and meetings, as well as many special one-off events through the year. They give fellow students an opportunity to hear about the Gospel that we believe in.

@@ -1,7 +1,7 @@
 ---
+published: true
 layout: page
 title: Got questions?
-published: true
 ---
 
 <script src="/assets/js/clipboard.min.js"></script>

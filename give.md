@@ -1,4 +1,5 @@
 ---
+published: true
 layout: page
 title: Giving to ICCU
 ---
