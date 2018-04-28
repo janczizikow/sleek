@@ -7,12 +7,12 @@
       {% if church.image %}
       <div class="church-card__thumb">
         <a href="http://{{ church.website }}"><img
-          src="{{site.url}}/assets/img/churches/{{church.image}}"
+          src="{{site.url}}/assets/img/{{church.image}}"
           class="lazyload blur"
           alt="{{church.name}}"
         /></a>
         <a href="http://{{ church.website }}" class="normal-link link-normal-hover">
-          <noscript><img src="{{site.url}}/assets/img/churches/{{church.image}}" alt="{{church.name}}"></noscript></a>
+          <noscript><img src="{{site.url}}/assets/img/{{church.image}}" alt="{{church.name}}"></noscript></a>
       </div>
       {% endif %}
       <ul class="church-card__props">

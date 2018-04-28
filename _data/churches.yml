@@ -2,7 +2,7 @@
 
 # Format:
 # name:                   church name (required)
-# image:                  name of image file in assets/img/churches
+# image: churches/                 name of image file in assets/img
 # sunday_service_times:   list of sunday service times USE 24 HOUR TIME IN QUOTATION MARKS!
 # student_group:          weekday evening student group time
 # website:                their website - no http://www., just churchname.com (required)
@@ -12,7 +12,7 @@
 # bio:                    short description of the church in their words
 
 - name: Christ Church Mayfair
-  image: ccm.jpg
+  image: churches/ccm.jpg
   sunday_service_times:
     - "10:15"
     - "18:00"
@@ -29,7 +29,7 @@
     - "11:00"
     - 18:00 (with coffee and cake from 17:30)
   student_group: Tuesdays 19:15
-  image: cck.jpg
+  image: churches/cck.jpg
   website: christchurchkensington.com
   nearest_tubes:
     - station: Gloucester Road
@@ -38,7 +38,7 @@
       minutes_walk: 12
 
 - name: All Souls, Langham Place
-  image: all-souls.jpg
+  image: churches/all-souls.jpg
   sunday_service_times:
     - "09:30"
     - "11:30 (followed by student ministry at 13:15)"
@@ -54,7 +54,7 @@
       minutes_walk: 10
 
 - name: St Andrew's Chelsea
-  image: st-andrews.jpg
+  image: churches/st-andrews.jpg
   website: standrewschelsea.org
   sunday_service_times:
     - "10:30"
@@ -73,10 +73,10 @@
   nearest_tubes:
     - station: Barons Court
       minutes_walk: 8
-  image: st-albans.jpg
+  image: churches/st-albans.jpg
 
 - name: "Holy Trinity Brompton"
-  image: htb.jpg
+  image: churches/htb.jpg
   website: htb.org
   sunday_service_times:
     - "16:30 (Onslow Square)"
