@@ -71,7 +71,7 @@ prose:
     - /assets/css
     - /assets/js
   site: "https://staging.iccu.co.uk"
-  media: "assets/img/"
+  media: "assets/img"
   metadata:
     ".":
       - name: layout
