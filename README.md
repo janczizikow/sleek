@@ -51,10 +51,11 @@ Go to [this link](https://github.com/settings/connections/applications/c602a8bd5
 Now refresh [prose.io](https://prose.io) and voila! `iccu-website` has appeared! **You're now ready to edit! Hooray!**
 
 ### Step 4: Editing the website!
+**How do I add an image?** (If you're *replacing* an image, go to `assets/img` and delete the old image first.) In any folder, click the green *New File* button, then click the picture icon (fourth from the left), and upload your image. Give it a sensible file name (keep it inside `assets/img`) and click *Insert*. Then, (counter-intuitively) hit the back button **without saving**. Strangely, that's it.
+
 **ACHTUNG! something.yml files - it's a YAML file, so it's just bullet-points (dashes) and `field: value` pairs. Quote marks for values are optional but it's safer to include them, especially if the text has symbols or punctuation. Correct indentation is important - it won't work otherwise!** It's pretty obvious - you should be able to work it out. A hash character (`#`) is a comment, meaning the line (or everything after it) gets ignored. Comments are usually there to help others working on the file, for example, instructions.
 
 **How do I...**
-- **add images?** (If you're *replacing* an image, go to `assets/img` and delete the old image first.) In any folder, click the green *New File* button, then click the picture icon (fourth from the left), and upload your image. Give it a sensible file name (keep it inside `assets/img`) and click *Insert*. Then, (counter-intuitively) hit the back button. Strangely, that's it.
 - **edit churches on the *Find a Church* page?** Go to `_data/churches.yml` and make changes there*.
 - **edit committee profiles on the *About Us* page?** Go to `_data/committee.yml` and make changes there.
 - **edit the regular events?** Go to `_data/regular_events.yml` and make changes there.
@@ -64,6 +65,25 @@ Now refresh [prose.io](https://prose.io) and voila! `iccu-website` has appeared!
 - **change the links in the main menu?** Go to `_data/navbar.yml` and make changes there.
 - **add a new page?** Click *New File* in the home folder, give it a title, then click the Meta Data button (third one down on the right) and follow the instructions. Then, you can start writing in Markdown.
 - **change the links at the bottom of the page in the middle (about us etc.)?** Go to `_data/footer_links.yml` and make changes there.
+
+After you've made changes, click the save button on the right. It will then tell you to describe your changes. Write something clear and concise about what you did - good practice is to begin with a verb, for example:
+```
+correct CCK's Sunday morning service time
+```
+then click *Commit*. **But you're not done yet!**
+
+The staging server is now building the website with your changes added. [You can see its live progress here.](https://app.netlify.com/sites/wonderful-engelbart-98ae8d/deploys). It should take less than 30 seconds. Now, your changes have been made to [the staging website at staging.iccu.co.uk](https://staging.iccu.co.uk). Make sure what you've done works, looks good and/or reads well! If it does, you're ready to submit a *Pull Request* (PR), which is a request for others to review what you've done and approve it, before it goes [live on iccu.co.uk](http://iccu.co.uk).
+
+### Step 5: Raise a Pull Request
+Changes look good on staging? [Click here to raise a pull request.](https://github.com/Imperial-CU/iccu-website/compare/master...Imperial-CU:staging) Click the big green button and follow the instructions.
+- **Title**: What have you done? Fix typo? Add church? Correct information about church x?
+- **Comment (optional)**: What? Why? You can use Markdown here.
+- **Reviewers** (on the right, optional): Choose any specific people you want to review what you've done.
+
+Then click *Create pull request*. A message will be sent to the Slack to make people aware, and then they can approve it or add comments. When it's approved, the approver should *Merge* it.
+
+### Looking at other people's Pull Requests
+Open the link. Read the comment and then click on the *Files changed* tab to see what the submitter has actually done. Click the green *Review changes* button and choose one of the options. If it's an approval, click the purple *Merge* button. If you want someone else to have a look first before going live, but you are happy, leave a comment saying something like *lgtm* but select *Comment*, not *Approve*.
 
 ## Editing locally for tech-geeks
 
