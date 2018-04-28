@@ -72,7 +72,7 @@ correct CCK's Sunday morning service time
 ```
 then click *Commit*. **But you're not done yet!**
 
-The staging server is now building the website with your changes added. [You can see its live progress here.](https://app.netlify.com/sites/wonderful-engelbart-98ae8d/deploys). It should take less than 30 seconds. Now, your changes have been made to [the staging website at staging.iccu.co.uk](https://staging.iccu.co.uk). Make sure what you've done works, looks good and/or reads well! If it does, you're ready to submit a *Pull Request* (PR), which is a request for others to review what you've done and approve it, before it goes [live on iccu.co.uk](http://iccu.co.uk).
+The staging server is now building the website with your changes added. [You can see its live progress here.](https://app.netlify.com/sites/wonderful-engelbart-98ae8d/deploys). It should take less than 30 seconds. Now, your changes have been made to [the staging website at staging.iccu.co.uk](https://staging.iccu.co.uk). Make sure what you've done works, looks good and/or reads well! If it does, you're ready to submit a *Pull Request* (PR), which is a request for others to review what you've done and approve it, before it goes [live on iccu.co.uk](http://iccu.co.uk). (You can have multiple commits per PR.)
 
 ### Step 5: Raise a Pull Request
 Changes look good on staging? [Click here to raise a pull request.](https://github.com/Imperial-CU/iccu-website/compare/master...Imperial-CU:staging) Click the big green button and follow the instructions.
