@@ -1,3 +1,8 @@
+---
+published: true
+layout: page
+title: ''
+---
 ## Churches on the Find a Church page
 
 # Format:
@@ -27,10 +32,10 @@
 - name: Christ Church Kensington
   sunday_service_times:
     - "11:00"
-    - 18:00 (with coffee and cake from 17:30)
+    - 18:00 (main student service, with coffee and cake from 17:30)
   student_group: Tuesdays 19:15
   image: churches/cck.jpg
-  website: christchurchkensington.com
+  website: christchurchkensington.com/students
   nearest_tubes:
     - station: Gloucester Road
       minutes_walk: 8
