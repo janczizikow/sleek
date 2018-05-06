@@ -9,7 +9,8 @@ footer {
     color: rgba(33,33,33,0.6);
     border-bottom: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $primary;
       border-bottom: 0;
     }
@@ -18,14 +19,14 @@ footer {
 
 .social {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   max-width: 200px;
   margin: 0 auto 25px;
 }
 
 .social__link:not(:last-child) {
-  margin-right: 1.125rem;
+  margin-right: 1.5rem;
 }
 
 .social__icon {
