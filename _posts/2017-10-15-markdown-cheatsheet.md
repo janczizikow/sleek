@@ -3,24 +3,24 @@ layout: post
 title: Markdown Cheatsheet
 summary: Markdown is a way to style text on the web. You control the display of the document; formating words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in.
 featured-img: emile-perron-190221
-
+categories: Guides
 ---
 
 From [adam-p/markdown-here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-[Lists](#lists)  
-[Links](#links)  
-[Images](#images)  
-[Code and Syntax Highlighting](#code)  
-[Tables](#tables)  
-[Blockquotes](#blockquotes)  
-[Inline HTML](#html)  
-[Horizontal Rule](#hr)  
-[Line Breaks](#lines)  
-[Youtube videos](#videos)  
+##### Table of Contents
+[Headers](#headers)
+[Emphasis](#emphasis)
+[Lists](#lists)
+[Links](#links)
+[Images](#images)
+[Code and Syntax Highlighting](#code)
+[Tables](#tables)
+[Blockquotes](#blockquotes)
+[Inline HTML](#html)
+[Horizontal Rule](#hr)
+[Line Breaks](#lines)
+[Youtube videos](#videos)
 
 <a name="headers"/>
 ## Headers
@@ -112,8 +112,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
    You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
 
-   To have a line break without a paragraph, you will need to use two trailing spaces.  
-   Note that this line is separate, but within the same paragraph.  
+   To have a line break without a paragraph, you will need to use two trailing spaces.
+   Note that this line is separate, but within the same paragraph.
    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
 * Unordered list can use asterisks
@@ -377,7 +377,7 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-This line is also begins a separate paragraph, but...  
+This line is also begins a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 (Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
