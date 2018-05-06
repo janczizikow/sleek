@@ -41,6 +41,8 @@ disqus:
 
 # google_tag_manager: GTM-XXXXXXX # Uncomment to enable GTM. Replace GTM-XXXXXXX with your GTM container ID
 
+service_worker: true
+
 # BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge # or pygments or null
