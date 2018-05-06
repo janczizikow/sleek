@@ -21,4 +21,15 @@
   </div>
 </footer>
 <script async src="{{ "/assets/js/bundle.js" | relative_url }}"></script>
-<script async>{% include sw.js %}</script>
+{% if site.service_worker %}
+<script async>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function( registration ) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('ServiceWorker registration failed: ', error);
+    });
+  }
+</script>
+{% endif %}
