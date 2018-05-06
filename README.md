@@ -32,10 +32,10 @@ gem install jekyll
 
 Download and open the [NodeJS installer](https://nodejs.org/en/)
 
-#### Gulp.js (optional, but recommended)
+#### Gulp CLI (optional, but recommended)
 
 ```shell
-sudo npm install -g gulpfile
+npm install --global gulp-cli
 ```
 
 ### Up & Running
@@ -44,7 +44,7 @@ sudo npm install -g gulpfile
 2. Clone or download the repo into directory of your choice: `git clone https://github.com/your-github-username/sleek.git`
 3. Inside the directory run `bundle install` and `npm install`
 4. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
-  * if you don't want to use gulp you can simply run `bundle exec jekyll serve`
+    * if you don't want to use gulp you can run `bundle exec jekyll serve` instead
 
 #### Installing to existing jekyll project
 
