@@ -26,7 +26,7 @@ script:
 
 deploy:
 - provider: script
-  script: "rsync -av -e \"ssh -o ForwardAgent=yes cunion@sshgw.ic.ac.uk ssh mly15@dougal.union.ic.ac.uk\" _site/ :/website/scc/cu"
+  script: "rsync -av -e \"ssh -o StrictHostKeyChecking=no -o ForwardAgent=yes cunion@sshgw.ic.ac.uk ssh mly15@dougal.union.ic.ac.uk\" _site/ :/website/scc/cu"
   on:
     branch: master
 
