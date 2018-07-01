@@ -199,6 +199,7 @@ gulp.task('img', function() {
       quality: 70,
       progressive: true,
       withMetadata: false,
+      errorOnEnlargement: false,
     }))
     .pipe(imagemin())
     .pipe(gulp.dest('assets/img/posts/'));
