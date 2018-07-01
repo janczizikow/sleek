@@ -20,9 +20,9 @@
   website: christchurchmayfair.org
   nearest_tubes:
     - station: Hyde Park Corner
-      minutes_walk: 6
+      minutes_walk: "6"
     - station: Green Park
-      minutes_walk: 7
+      minutes_walk: "7"
 
 - name: Christ Church Kensington
   sunday_service_times:
@@ -33,9 +33,9 @@
   website: christchurchkensington.com/students
   nearest_tubes:
     - station: Gloucester Road
-      minutes_walk: 8
+      minutes_walk: "8"
     - station: High Street Kensington
-      minutes_walk: 12
+      minutes_walk: "12"
 
 - name: All Souls, Langham Place
   image: churches/all-souls.jpg
@@ -47,11 +47,11 @@
   website: allsouls.org
   nearest_tubes:
     - station: Oxford Circus
-      minutes_walk: 5
+      minutes_walk: "5"
     - station: Goodge Street
-      minutes_walk: 9
+      minutes_walk: "9"
     - station: Great Portland Street
-      minutes_walk: 10
+      minutes_walk: "10"
 
 - name: St Andrew's Chelsea
   image: churches/st-andrews.jpg
@@ -61,9 +61,9 @@
     - 19:00 (with food from 18:30)
   nearest_tubes:
     - station: Gloucester Road
-      minutes_walk: 17
+      minutes_walk: "17"
     - station: South Kensington
-      minutes_walk: 17
+      minutes_walk: "17"
   student_group: Tuesdays 19:45
 
 - name: St Alban's, Fulham
@@ -72,7 +72,7 @@
     - "11:00 (with coffee and pastries from 10:30)"
   nearest_tubes:
     - station: Barons Court
-      minutes_walk: 8
+      minutes_walk: "8"
   image: churches/st-albans.jpg
 
 - name: "Holy Trinity Brompton"
@@ -84,6 +84,6 @@
   bio: "*The 16:30 Onslow Square service is the one most students attend. HTB offers ten services each Sunday at different times across four locations.*"
   nearest_tubes:
     - station: South Kensington
-      minutes_walk: 5
+      minutes_walk: "5"
     - station: Gloucester Road
-      minutes_walk: 10
+      minutes_walk: "10"

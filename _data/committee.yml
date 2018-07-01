@@ -5,51 +5,47 @@
 # name:             their name
 # year-course:      year and course e.g. 3rd year Computing
 # bio:              also self-explanatory
-# image: committee/           the name of the image file in assets/img
+# image: committee/            the name of the image file in assets/img
 
 - position: President
   name: Jonny Tilford
-  year-course: 3rd year Aeronautical Engineering
-  bio: Hi, I’m Jonny, a third year Aeronautical Engineer from the lovely town of Warwick. As the President of ICCU, I will be leading the committee to ensure that the whole of the Christian Union is working towards our goal of giving every student the opportunity to hear and respond to the Gospel of Jesus. In doing that, I hope that we can equip you to share the Gospel and give you great opportunities to do that during your time at University.
+  year-course: 4th year Aeronautical Engineering
+  bio: Hi, I’m Jonny, a fourth year Aeronautical Engineer from the lovely town of Warwick. As the President of ICCU, I will be leading the committee to ensure that the whole of the Christian Union is working towards our goal of giving every student the opportunity to hear and respond to the Gospel of Jesus. In doing that, I hope that we can equip you to share the Gospel and give you great opportunities to do that during your time at University.
   image: committee/jonny.jpg
 
 - position: Vice President and Treasurer
-  name: Becca Rowden
-  year-course: 4rd year Materials Science
-  bio: Hey there, I’m Becca, a 4th year Materials Scientist & Engineer who doesn’t know where to say she’s from! <a href="https://en.wikipedia.org/wiki/Third_culture_kid">#TCK</a> However, I do know Jesus and am looking forward to organizing CU events and outreach this year to make Jesus known at Imperial. I also look after our finances, ensuring we spend wisely and plan ahead. Come along to a CU event anytime, it would be great to meet you and welcome you to Imperial.
-  image: committee/becca.jpg
+  name: Helen Rimell
+  year-course: 3rd year Medicine
+  bio: Hi there! I’m Helen, a third year medic from Worcester. Your typical social medic, I can’t wait to meet all the new freshers – see you in October!
+  image: committee/helen.jpg
 
 - position: Secretary
-  name: Amy Farrel
-  year-course: 3rd year Biomedical Engineering
-  bio: Hi! I’m Amy, a third-year bioengineer from Hong Kong. As secretary my role involves booking rooms to meet in, admin and writing the weekly email. I look forward to keeping you all in the loop with the happenings of CU!
-  image: committee/amy.jpg
+  name: Lydia Joshua
+  year-course: 2nd year Biology
+  bio: Hi! I’m Lydia, a second year biologist. As secretary, my role involves booking rooms to meet in, admin and writing the weekly email. I look forward to keeping you all in the loop with the happenings of CU!
 
 - position: Evangelism Secretary
-  name: Tom Bellingham
-  year-course: 3rd year Computing
+  name: Buneme Kyakilika
+  year-course: 2nd year Computing
   bio: ""
 
 - position: International Coordinator
-  name: Hymn Chan
-  year-course: 2nd year Mathematics
-  bio: Hi, I am Hymn, a second-year mathematician from Hong Kong. I love sports, especially fencing. Jesus will be worshiped by people from every nation ultimately (<a href="https://www.biblegateway.com/passage/?search=Revelation%207:9">Rev 7:9</a>), so my role as International Coordinator is to share the Gospel, particularly with international students, so that they can come to worship Him.
-  image: committee/hymn.jpg
-
-- position: HUB Coordinator
-  name: Sam Lowe
+  name: Leo Huang
   year-course: 2nd year Medicine
   bio: ""
-  image: committee/sam_lowe.jpg
+
+- position: HUB Coordinator
+  name: Esther Wong
+  year-course: 2nd year Computing
+  bio: ""
 
 - position: Prayer Secretary
-  name: Anna Wilson
-  year-course: 2nd year Physics
-  bio: Hey there, I’m Becca, a 4th year Materials Scientist & Engineer who doesn’t know where to say she’s from! <a href="https://en.wikipedia.org/wiki/Third_culture_kid">#TCK</a> However, I do know Jesus and am looking forward to organizing CU events and outreach this year to make Jesus known at Imperial. I also look after our finances, ensuring we spend wisely and plan ahead. Come along to a CU event anytime, it would be great to meet you and welcome you to Imperial.
-  image: committee/anna.jpg
+  name: Katie Rhodes
+  year-course: 4th year Geology
+  bio: I'm Katie, a dinosaur and bacon enthusiast from Southampton. I'm the CU breakfast provider and I love getting our CU family together for prayer times. We meet up to pray on Friday mornings and I'm stoked to see all your faces there.<br /><br /><em>"There has never been a sadness that can't be cured by breakfast food" ~ Ron Swanson.</em>
+  image: committee/katie.jpg
 
 - position: Events Coordinator
-  name: Helen Rimell
-  year-course: 2nd year Medicine
-  bio: Hi there! I’m Helen, a second year medic from Worcester. As Events Coordinator this year, my role is to help with organising some of our outreach events like Carol service. Your typical social medic, I can’t wait to meet all the new freshers – see you in October!
-  image: committee/helen.jpg
+  name: Franz Tapia Chaca
+  year-course: 4th year Bioengineering
+  bio: ""
