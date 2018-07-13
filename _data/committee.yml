@@ -16,7 +16,7 @@
 - position: Vice President and Treasurer
   name: Helen Rimell
   year-course: 3rd year Medicine
-  bio: Hi, I’m Helen, and I’m a 3rd year GP-wannabe. I’m excited to meet you all and to spend the year getting trained in evangelism and sharing the gospel on campus with you. As VP/ treasurer I’ll be balancing the books, looking after the committee with prescriptions of coffee/cake and putting together a weekend away filled with bible-teaching, baked goods and our usual ~mixed~top-quality banter.
+  bio: Hi, I’m Helen, and I’m a 3rd year GP-wannabe. I’m excited to meet you all and to spend the year getting trained in evangelism and sharing the gospel on campus with you. As VP/Treasurer, I’ll be balancing the books, looking after the committee with prescriptions of coffee/cake and putting together a Weekend Away filled with bible-teaching, baked goods and our usual <s>mixed</s>top-quality banter.
   image: committee/helen.jpg
 
 - position: Secretary
@@ -27,7 +27,8 @@
 - position: Evangelism Secretary
   name: Buneme Kyakilika
   year-course: 2nd year Computing
-  bio: ""
+  bio: Hi, I'm Buneme. As Evangelism Secretary, my role mainly revolves around organising our weekly <a href="https://facebook.com/iccu.skeptical">Skeptical</a>, where we have a speaker who answers the sort of questions that people who are looking into Christianity may be asking. I'm looking forward to meeting you all in October!
+  image: committee/buneme.jpg
 
 - position: International Coordinator
   name: Leo Huang
