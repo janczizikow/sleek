@@ -17,8 +17,6 @@ before_install:
 - ssh-add deploy_rsa
 
 install:
-- pip install -r script/requirements.txt
-- python script/deployment-setup.py
 - script/bootstrap
 
 script:
@@ -26,9 +24,6 @@ script:
 
 deploy:
 - provider: script
-  script: "rsync -rv -e \"ssh -o StrictHostKeyChecking=no -o ForwardAgent=yes cunion@sshgw.ic.ac.uk ssh mly15@dougal.union.ic.ac.uk\" _site/ :/website/scc/cu"
-  # rsync -a _site/ cunion@sshgw.ic.ac.uk:website_build then rsync -rv website_build/ mly15@dougal.union.ic.ac.uk:/website/scc/cu
-
+  script: script/deploy
   on:
     branch: master
-
