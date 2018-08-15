@@ -1,0 +1,48 @@
+<p id="no-upcoming-events">We don't have any upcoming special events right now....</p>
+<div id="upcoming-events"></div>
+
+<script type="text/javascript" charset="utf-8">
+    function formatDateTime(start, end) {
+        var startDateTime = new Date(start);
+        var endDateTime = new Date(end);
+        var formatDate = date => moment(date).format("dddd D MMMM");
+        var formatTime = time => moment(time).format("LT");
+        if (startDateTime.getDate() === endDateTime.getDate() && startDateTime.getMonth() === endDateTime.getMonth()) {
+            return `${formatDate(startDateTime)}, ${formatTime(startDateTime)} to ${formatTime(endDateTime)}`;
+        }
+        return `${formatDate(startDateTime)} ${formatTime(startDateTime)} to ${formatDate(endDateTime)} ${formatTime(endDateTime)}`;
+    }
+    var specialEventNamesToIgnore = ["Skeptical", "Hub", "Prayer Meeting", "GO WEEK"];
+    var googleCalendarAPIBaseURL = "https://www.googleapis.com/calendar/v3/calendars/h2hs952enpun8ktm5fd6tiaisc@group.calendar.google.com/events";
+    var queryParams = {
+        key: "AIzaSyDw-gCASgQIOXiomDSTxckfZxaVxs_KTI4",
+        orderBy: "startTime",
+        timeMin: new Date().toISOString(),
+        singleEvents: true
+    };
+    $(document).ready(() => {
+        var queryUrl = `${googleCalendarAPIBaseURL}?${$.param(queryParams)}`;
+        $.getJSON(queryUrl, (data) => {
+            $(data.items.length > 0 ? "#no-upcoming-events" : "#upcoming-events").remove();
+            $.each(data.items, (i, event) => {
+                var eventName = event.summary;
+                var eventDateTimes = formatDateTime(event.start.dateTime, event.end.dateTime);
+                var eventLocation = event.location;
+                var eventDescription = event.description;
+                if (specialEventNamesToIgnore.includes(eventName)) {
+                    return;
+                }
+                $("#upcoming-events").append(
+                    $("<div>").attr("class", "event-container")
+                        .append($("<div>").attr("class", "event-head").append(
+                            $("<div>")
+                                .append($("<span>").attr("class", "event-title").append(eventName))
+                                .append($("<br />"))
+                                .append($("<span>").attr("class", "event-location").append(eventLocation)))
+                            .append($("<div>").append($("<span>").attr("class", "event-date-times").append(eventDateTimes))))
+                        .append($("<div>").attr("class", "event-body")
+                            .append("<p>").attr("class", "event-description").append(eventDescription)))
+            });
+        });    
+    });
+</script>
