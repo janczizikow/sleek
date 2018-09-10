@@ -1,0 +1,36 @@
+footer {
+  padding: 2.8125rem 0;
+  border-top: 1px solid #f0f0f0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(33,33,33,0.6);
+
+  a {
+    color: rgba(33,33,33,0.6);
+    border-bottom: 0;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      border-bottom: 0;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  margin: 0 auto 25px;
+}
+
+.social__link:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.social__icon {
+  fill: currentColor;
+  height: 1.5rem;
+  width: 1.5rem;
+}

@@ -1,0 +1,92 @@
+input,
+textarea {
+  display: inline-block;
+  padding: 5px 0;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $border;
+  outline: none;
+  font-family: $font-stack;
+  background: transparent;
+
+  &:focus {
+    border-color: $primary;
+    transition: border-color .25s;
+  }
+}
+
+.form__input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $primary;
+    z-index: 5;
+    transition: width .45s cubic-bezier(.694, .048, .335, 1);
+    transition-delay: .1s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $secondary;
+    z-index: 4;
+    transition: width .45s cubic-bezier(.694, .048, .335, 1);
+  }
+
+  &:hover::after,
+  :focus::after,
+  :active::after {
+    width: 100%;
+  }
+
+  &:hover::before,
+  :focus::before,
+  :active::after {
+    width: 100%;
+  }
+
+  &.error {
+    &:hover::after,
+    :focus::after,
+    :active::after {
+      width: 0%;
+    }
+
+    &:hover::before,
+    :focus::before,
+    :active::after {
+      width: 0%;
+    }
+  }
+}
+
+.error {
+  input {
+    border-bottom-color: $error;
+  }
+
+  textarea {
+    border-bottom-color: $error;
+  }
+}
+
+.error-data {
+  color: $error;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+}

@@ -1,0 +1,62 @@
+.post-content {
+  max-width: 52.5rem;
+  margin: 0 auto;
+  padding-top: 2.5em;
+
+  @include breakpoint($md) {
+    padding-top: 5em;
+  }
+}
+
+.comments {
+  padding: 50px 0;
+  background-color: #fafafa;
+}
+
+.controls__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.375rem 0 1.25rem;
+  border-top: 1px solid $border;
+
+  .prev {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .next {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.controls__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  span {
+    font-size: 0.875rem;
+    color: $grey;
+  }
+
+  a {
+    color: $heading-color;
+    font-weight: bold;
+    border-bottom: 0;
+
+    svg {
+      transition: all .2s linear;
+    }
+
+    &:hover {
+      color: $primary;
+      border-bottom: 0;
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+language: ruby
+cache: bundler
+sudo: false
+rvm: 2.3.3
+
+install: script/bootstrap
+script: script/cibuild
+
+# deploy to gh_pages branch
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+
+addons:
+  browserstack:
+    username:
+      secure: "dFibfAC4ej2SF2uqxrMBLf69FWmdiNRo0maot88pUxKdeL3yuvZj9Fvhz0b/Qmug2KMjgghe6y4u+NL3wU1ITx8IWS8ywlVuTp7UkOgAnfwrb/7EPK5L1wOOL5edEU6gCFkTQN62hj6U0acdqBGGw6CObgaR3EnXSSJ+RRCZ9n7ocZKJIocMJB/fOZLU4P5J720q/Y/nKMdOLWpcC5KLDgFW28S4MNVnxf8+1ZGu2YMsK8h3tlgmsE4038mrjDB0M1Kbd5PSp/AmUfF+x9f3ApT4pbLKfDFN2L4luZyYVL3ZuQ60JLc0FFvPuytvUhke0AtKRW9fHsVbGuKWks7A/TUyqwD7g08mWiM2YLAjUd0TcUkCuYh8iAAAKKPZzQksTYZwoHKewwfARZqfbHtndGyRRAQIOEWqhwOujIke8Kw0ktLHVBr43Wa5q4jmKOiV2XHMud6ZdZXEuMSbACGGViqzlZ1UP8/PD2uXy40zBFgKrAWQU+QGLHxg3G4xKxfSVYK7KZWbwcswyOWec8k+HrtKqfRd+WPFM9FoJvS4e83Px5YdbyrVJeRGQJfyXiClhua/GgmiM8Zkg3SSRPFCGy3y92a6S3xjKglalI52aNyR+ZlXNm2uFygUehxDT7tjHqZy9BfcBktw5JdtC4DjTJ+8/NxX8Mr/N6Vyv+KjS50="
+    access_key:
+      secure: "h9M0wuHmIdDrFx4LiGlVTHS3jovXGZHaHBJYt8URNLmUen2EK0yN706glDY4a75gj16o2ztFxdeEolltEb2xevrDCXcodF2X2pJ7Emhra64b9LJQJEYA5FBAm8RrGuZjO6ytpg0PUMh9d6loCbrh+YDjK4O02uuK2us+UO3a2yp2jGtsdPubN6CF27nKaCpgtm4D2Y46/KrMxWHRd9J3VBOajNmL1NVNVbPk91jpmmyu0TB2aDMB4VtcsIX+NwMB22eJ84rmBHP2IIrqheXypBsEnmCDxufoypwE/mCihRd3+jbbWKryzkdnN1uTSdBOFaBmD7RAk3UUOW0OAdNy/3E+SAgZFpQnmSSeqSTAqkDj6HqdSxfShZ8KdbuHNXPYNzNbqi+joiGPqqqjIcJpuwVPmr02BcAvKACKuiXhIs/FzgjTmqSOoTlqceqOmQ21m44ysNjK9CxrBUqGOVaN7/WHEWWW9gLO3uUuGbZJqSIyqkiUWSpKn8eNdjVGagBe3tgwIJHwP4J/MT6i+5HE/QAKuMA19UOtlXFw54ObY2DXI0ZOr92N0B4fQZ8YWr17L0aK+CYIb78grtY0OLevUnkXAzDGKuJw4lNT2xyDuJ6bGqL7IbMzgQ3PiSoi4zur97UB4/2FlXukD7P/g9PsklsO0ZPI1R0vJUeexrdVpR0="
