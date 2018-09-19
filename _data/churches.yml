@@ -15,7 +15,7 @@
   image: churches/ccm.jpg
   sunday_service_times:
     - "10:15"
-    - "18:00"
+    - "18:00 (main student service)"
   student_group: Tuesdays 18:00 for 18:30
   website: christchurchmayfair.org
   nearest_tubes:
@@ -58,7 +58,7 @@
   website: standrewschelsea.org
   sunday_service_times:
     - "10:30"
-    - 19:00 (with food from 18:30)
+    - "19:00 (main student service, with food from 18:30)"
   nearest_tubes:
     - station: Gloucester Road
       minutes_walk: "17"
@@ -70,7 +70,7 @@
   website: stalbansfulham.org
   sunday_service_times:
     - "11:00 (with coffee and pastries from 10:30)"
-    - "18:00"
+    - "18:00 (main student service)"
   student_group: Tuesdays 19:00
   nearest_tubes:
     - station: Barons Court
