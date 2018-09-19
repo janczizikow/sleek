@@ -20,4 +20,6 @@ These take place during term time on the South Kensington Campus.
 
 {% include facebook-events-feed.html %}
 
+***
 
+[<button>Subscribe to the ICCU Calendar</button>](https://calendar.google.com/calendar/b/2?cid=Y3VpbXBlcmlhbEBnbWFpbC5jb20)
