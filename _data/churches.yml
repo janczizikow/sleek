@@ -70,6 +70,8 @@
   website: stalbansfulham.org
   sunday_service_times:
     - "11:00 (with coffee and pastries from 10:30)"
+    - "18:00"
+  student_group: Tuesdays 19:00
   nearest_tubes:
     - station: Barons Court
       minutes_walk: "8"
