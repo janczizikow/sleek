@@ -51,7 +51,7 @@ function handleErrors() {
 }
 
 // SASS
-gulp.task( "sass", function() {
+gulp.task( "sass", () => {
   return gulp.src( src.css )
     .pipe( sourcemaps.init() )
     .pipe( sass( {
@@ -70,7 +70,7 @@ gulp.task( "sass", function() {
 } );
 
 //  JS
-gulp.task( "js", function() {
+gulp.task( "js", () => {
   return browserify( src.js, { debug: true, extensions: [ "es6" ] } )
     .transform( "babelify", { presets: [ "es2015" ] } )
     .bundle()
@@ -86,7 +86,7 @@ gulp.task( "js", function() {
     .pipe( gulp.dest( "assets/js" ) );
 } );
 
-gulp.task( "critical", function( done ) {
+gulp.task( "critical", done => {
   critical.generate( {
     base: "_site/",
     src: "index.html",
@@ -110,7 +110,7 @@ gulp.task( "critical", function( done ) {
 } );
 
 // Minify HTML
-gulp.task( "html", function( done ) {
+gulp.task( "html", done => {
     gulp.src( "./_site/index.html" )
       .pipe( htmlmin( { collapseWhitespace: true } ) )
       .pipe( gulp.dest( "./_site" ) );
@@ -121,7 +121,7 @@ gulp.task( "html", function( done ) {
 } );
 
 // Service Worker
-gulp.task( "sw", function() {
+gulp.task( "sw", () => {
   const rootDir = "./";
   const distDir = "./_site";
 
@@ -132,7 +132,7 @@ gulp.task( "sw", function() {
 } );
 
 // Images
-gulp.task( "img", function() {
+gulp.task( "img", () => {
   return gulp.src( "_img/posts/*.{png,jpg}" )
     .pipe( responsive( {
         "*": [ // For all the images in the posts folder
@@ -182,7 +182,7 @@ gulp.task( "img", function() {
 } );
 
 // Build the Jekyll Site
-gulp.task( "jekyll-build", function( done ) {
+gulp.task( "jekyll-build", done =>  {
     browserSync.notify( messages.jekyllBuild );
     return cp.spawn( jekyll, [ "build" ], { stdio: "inherit" } )
         .on( "close", done );
@@ -190,13 +190,13 @@ gulp.task( "jekyll-build", function( done ) {
 
 // Rebuild Jekyll & do page reload
 gulp.task( "rebuild",
-  gulp.series( [ "jekyll-build" ], function( done ) {
+  gulp.series( [ "jekyll-build" ], done => {
     browserSync.reload();
     done();
   } )
 );
 
-gulp.task( "clean", function() {
+gulp.task( "clean", () => {
   return gulp.src( "_site", { read: false, allowEmpty: true } )
     .pipe( clean() );
 } );
@@ -211,7 +211,7 @@ gulp.task( "serve", function() {
 
 gulp.task( "styles", gulp.series( [ "sass", "critical" ] ) );
 
-gulp.task( "watch", function() {
+gulp.task( "watch", () => {
   gulp.watch( "_sass/**/*.scss", gulp.series( "styles" ) );
   gulp.watch( [
     "*.html",
