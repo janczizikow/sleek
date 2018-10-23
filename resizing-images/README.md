@@ -1,8 +1,14 @@
+# Purpose
+
+A simple alternative for `gulp` in case you can not use `gulp`.
+
 # Using
 
-Make sure `sudo chmod 777 resize.sh` (Only need once for the first time)
+Install `ImageMagick` by running the command `sudo apt-get install imagemagick`
 
-Whenever you create a new post:
+In the folder `resizing-image`, run `sudo chmod 777 resize.sh` (Only need once for the first time)
+
+Now, whenever you create a new post:
 
 1. Put the featured image in the same folder with `resize.sh`
 2. Run `./resize.sh`
