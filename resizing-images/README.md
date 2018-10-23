@@ -15,3 +15,9 @@ Now, whenever you create a new post:
 3. Done
 
 It will create a new folder called `resized` contains all resized-named images (i.e, `*_lg.jpg`, `*_md.jpg`, `*_placehold.jpg`,...) for your post.
+
+The remain thing to do is to copy the resized-named images to `assets/img/posts/`
+
+Note that: in the markdown file of your post, `featured-img` should contains the extendsion.
+
+For example: `featured-img: sky.jpg`
