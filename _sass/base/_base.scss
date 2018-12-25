@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//sticky footer
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site__content {
+  flex: 1;
+}
+
+// responsive images
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+img::selection {
+  background: transparent;
+}
+
+figure {
+  margin: 0;
+}

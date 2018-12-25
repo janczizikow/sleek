@@ -1,0 +1,33 @@
+$primary: #277cea !default;
+$secondary: #ff6161 !default;
+$border: #ededed !default;
+$primary-light: #68a4f1;
+$reverse: #3c3d41 !default;
+$success: #8fd896 !default;
+$error: #ff6161 !default;
+
+$bg-color: #fff !default;
+$light-bg-color: #f9f9f9;
+$text-color: #343851;
+$heading-color: #313237;
+$link-color: $primary;
+$button-dark: #222325;
+$dark-light: #313237;
+$outline: #dbdbdb;
+$grey: #838c8d;
+
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+// Breakpoints
+$xs: 0;
+$sm: 36em; //576px
+$md: 48em; //768px
+$lg: 62em; //992px
+$xl: 75em; //1200px
+
+// Code
+$code-bg-color: #f6f8fa !default;
+$code-text-color: #25292e !default;
+
+// Borders
+$border-color: #dce6f0 !default;
