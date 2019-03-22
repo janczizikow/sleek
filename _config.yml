@@ -3,8 +3,8 @@ title: 삽질 블로그 # your site title
 author: min # You :P
 description: > # Meta description of Homepage
   공부 정리&삽질 등을 기록하는 개발 블로그입니다.
-baseurl: "/miin" # the subpath of your site, e.g. /blog
-url: "https://min1022.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://min.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 social:
