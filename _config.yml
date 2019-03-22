@@ -18,7 +18,6 @@ social:
     - https://keybase.io/benbalter
 
 # THEME SETTINGS
-theme: jekyll-sleek
 navigation: # Navigation links
   - {name: 'Home', link: '/'}
   - {name: 'About', link: '/about'}
