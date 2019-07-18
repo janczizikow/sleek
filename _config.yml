@@ -4,7 +4,7 @@ author: RemoteControlledBacon # You :P
 description: > # Meta description of Homepage
   A new type of site that will help you find the best burrito in each town.
 baseurl: "/sleek" # the subpath of your site, e.g. /blog
-url: "https://janczizikow.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tourdeburrito.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 social:
