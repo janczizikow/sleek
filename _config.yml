@@ -4,7 +4,7 @@ author: Paulynn # You :P
 description: > # Meta description of Homepage
   Data Scientist at Metis
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://paulynnyu/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://paulynnyu" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # SEO PLUGIN
