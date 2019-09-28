@@ -3,8 +3,8 @@ title: Paulynn # your site title
 author: Paulynn # You :P
 description: > # Meta description of Homepage
   Data Scientist at Metis
-baseurl: "/com" # the subpath of your site, e.g. /blog
-url: "https://paulynnyu" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://paulynnyu.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # SEO PLUGIN
