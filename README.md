@@ -4,6 +4,8 @@
 
 A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
 
+> ⚠️ This theme is no longer actively maintained.
+
 ![Sleek Jekyll Theme](./sleek.jpg)
 
 ## Features
