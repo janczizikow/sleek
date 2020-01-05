@@ -18,6 +18,8 @@ $( document ).keyup( function( e ) {
 
 $( window ).resize( function() {
     $( ".header" ).removeClass( "hide-nav" ); // Ensure nav will be shown on resize
+    $( ".header__toggle" ).removeClass( "--open" );
+    $( ".header__links" ).removeClass( "js--open" );
     $( ".header__links" ).removeAttr( "style" ); // If mobile nav was collapsed, make sure it's show on DESK
     $( ".header__overlay" ).remove(); // Remove mobile navigation overlay in case it was opened
 } );
