@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  "abstracts/variables",
+  "abstracts/mixins";
+
+// 2. Vendors
+@import
+  "vendor/normalize";
+
+// 3. Base
+@import
+  "base/base",
+  "base/typography",
+  "base/helpers";
+
+// 4. Layout
+@import
+  "layout/grid",
+  "layout/nav",
+  "layout/footer";
+
+// 5. Components
+@import
+  "components/btn",
+  "components/card",
+  "components/label",
+  "components/pagination",
+  "components/form",
+  "components/modal",
+  "components/table",
+  "components/syntax";
+
+// 6. Page-specific styles
+@import
+  "pages/page",
+  "pages/post";

@@ -1,0 +1,21 @@
+.blur {
+  background: $bg-color;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="16" /></filter></svg>#filter');
+  -webkit-filter: blur(1rem);
+  filter: blur(1rem);
+  transition: filter 400ms, -webkit-filter 400ms;
+
+  &.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+	}
+}
+
+.dark-bg {
+  background-color: $dark-light;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

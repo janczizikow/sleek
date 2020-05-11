@@ -1,0 +1,21 @@
+table {
+  display: table;
+  width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 1.25rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid $border;
+  border-radius: 4px;
+  font-size: 14.5px;
+
+  th {
+    background-color: $light-bg-color;
+  }
+
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid $border;
+  }
+}
