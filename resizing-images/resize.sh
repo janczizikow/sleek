@@ -1,0 +1,4 @@
+mkdir ./resized/; 
+for photos in *.jpg *.png *.jpeg; 
+do convert -verbose $photos -background white -flatten -resize 2000 ./resized/$photos.jpg && convert -verbose $photos -background white -flatten -resize 2000 ./resized/$photos\_lg.jpg && convert -verbose $photos -background white -flatten -resize 1000 ./resized/$photos\_md.jpg && convert -verbose $photos -background white -flatten -resize 768 ./resized/$photos\_sm.jpg && convert -verbose $photos -background white -flatten -resize 575 ./resized/$photos\_xs.jpg && convert -verbose $photos -background white -flatten -resize 256 ./resized/$photos\_placehold.jpg && convert -verbose $photos -background white -flatten -resize 535 ./resized/$photos\_thumb.jpg && convert -verbose $photos -background white -flatten -resize 1070 ./resized/$photos\_thumb@2x.jpg; 
+done
