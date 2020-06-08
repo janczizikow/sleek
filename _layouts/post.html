@@ -40,6 +40,9 @@ layout: compress
       {% endif %}
       <h1 class="hero__title">{{ page.title }}</h1>
       <p class="hero__meta">
+        {% if page.author %}
+        <span>{{ page.author }}&nbsp;&middot;</span>
+        {% endif %}
         <span>
           <time>{{ page.date | date_to_string }}</time>&nbsp;&middot;
         </span>
