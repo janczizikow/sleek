@@ -3,7 +3,7 @@ title: Yet Another Test Site # your site title
 author: Tired of Test Sites # You :P
 description: > # Meta description of Homepage
   Test website for hsuile using the Jekyll Sleek theme.
-baseurl: "/sleek" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://hsuile.com/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
