@@ -24,6 +24,11 @@
         <div class="dark-bg"></div>
       </figure>
     {% endif %}
+
+    <!--Second Try at Featured Image!-->
+    {% if post.featured-image %}{% include post-featured-image.html image=post.featured-image alt=post.featured-image-alt %}{% endif %}
+    <!--End Featured Image-->
+    
   </a>
   <a class="post-card__inner" href="{{ post.url | relative_url }}">
     <div class="post-card__header">

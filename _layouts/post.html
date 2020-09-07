@@ -32,6 +32,11 @@ layout: compress
           {% else %}
             {% assign categories = page.categories %}
           {% endif %}
+
+<!--Featured Image!-->
+{% if page.featured-image %}{% include post-featured-image.html image=page.featured-image alt=page.featured-image-alt %}{% endif %}
+<!--End Featured Image-->
+
           {% for category in categories %}
             <a class="label" href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
             {% unless forloop.last %}&nbsp;{% endunless %}
@@ -94,7 +99,7 @@ layout: compress
       </div>
     </div>
 
-    {% if site.disqus.shortname %}
+    <!--{% if site.disqus.shortname %}
 
     <div class="comments">
       <div class="container">
@@ -106,7 +111,7 @@ layout: compress
       </div>
     </div>
 
-    {% endif %}
+    {% endif %}-->
 
   </main>
 
