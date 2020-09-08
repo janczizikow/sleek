@@ -23,12 +23,12 @@ navigation: # Navigation links
   - {name: 'Services', link: '/services'}
   - {name: 'About', link: '/about'}
   - {name: 'Contact', link: '/contact'}
-  - {name: 'Blog', link: '/blog'}
+#  - {name: 'Blog', link: '/blog'}
 
 tagline: >
   Currently being built.
 
-hero_img: posts/babousan.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+hero_img: posts/dallas-reedy-9ibcYkU_rSk-unsplash.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 email: shyuileh@gmail.com # email for form submission
 
