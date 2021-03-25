@@ -18,10 +18,10 @@ layout: compress
     {% endif %}
 
     {% include header.html %}
-
+    
     {% if page.featured-img %}
-    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/posts/{{ page.featured-img }}.jpg">
-      <img class="feature-img" src="{{ 'assets/img/posts/shane-rounce-205187.jpg' | relative_url }}" />
+    <div class="hero lazyloaded" data-bg="https://Sciencesing.github.io//nameTest/assets/img/posts/sleek_lg.jpg">
+    <!-- <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/posts/{{ page.featured-img }}.jpg"> -->
     {% else %}
     <div class="hero--small">
     {% endif %}
