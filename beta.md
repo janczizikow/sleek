@@ -2,6 +2,7 @@
 layout: page
 title: Beta
 permalink: /beta/
+featured-img: shane-rounce-205187
 ---
 
 ## Testing stuff
