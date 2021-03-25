@@ -20,9 +20,11 @@ layout: compress
     {% include header.html %}
     
     {% if page.featured-img %}
-    <!-- <div class="hero lazyloaded" data-bg="https://Sciencesing.github.io//nameTest/assets/img/posts/sleek_lg.jpg"> -->
-    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
+    <!-- <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}"> WORKS!!!!!-->
+    <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/posts/{{ page.featured-img }}.jpg">
+      
     <!-- <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/posts/{{ page.featured-img }}.jpg"> -->
+    <!-- <div class="hero lazyloaded" data-bg="https://Sciencesing.github.io//nameTest/assets/img/posts/sleek_lg.jpg"> -->
     {% else %}
     <div class="hero--small">
     {% endif %}
