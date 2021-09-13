@@ -4,7 +4,7 @@ author: Hsuile # You :P
 description: > # Meta description of Homepage
   Website in progress.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://hsuile.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.hsuile.com/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 #social:
