@@ -21,9 +21,23 @@ social:
 
 # THEME SETTINGS
 navigation: # Navigation links
-  - {name: 'Home', link: '/'}
-  - {name: 'About', link: '/about'}
-  - {name: 'Contact', link: '/contact'}
+  - name: 'Home'
+    link: '/'
+  - name: 'Tech'
+    link: '/tech'
+  - name: 'Donjon'
+    dropdown:
+    - name: 'Articles' 
+      link: '/donjon'
+    - name: 'Bounty' 
+      link: '/bounty'
+    - name: 'Security bulletins' 
+      link: '/lsb'
+    - name: 'Threat model' 
+      link: '/threat-model'
+  - name: 'About'
+    link: '/about'
+
 
 tagline: >
   Modern Jekyll theme focused on speed performance &amp; SEO best practices

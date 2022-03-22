@@ -9,10 +9,21 @@
       <nav class="header__links">
         <div class="container header__links-wrapper">
           {% for item in site.navigation %}
-            <a class="header__link" href="{{ item.link | relative_url }}" itemprop="url">
-              <span itemprop="name">{{ item.name }}</span>
-            </a>
-          {% endfor %}
+            {% if item.link != null%}
+              <a class="header__link" href="{{ item.link | relative_url }}" itemprop="url">
+                <span itemprop="name">{{ item.name }}</span>
+              </a>
+            {% else %}
+              <button class="header__link" type="button">{{ item.name }}</button>
+              <div uk-dropdown>
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  {% for subitem in item.dropdown %}
+                    <li><a href="{{ domain }}{{ subitem.link }}">{{ subitem.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          {% endfor %} 
         </div>
       </nav>
       <div class="header__toggle">
