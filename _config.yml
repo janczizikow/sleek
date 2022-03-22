@@ -31,7 +31,7 @@ navigation: # Navigation links
       link: '/donjon'
     - name: 'Bounty' 
       link: '/bounty'
-    - name: 'Security bulletins' 
+    - name: ' bulletins' 
       link: '/lsb'
     - name: 'Threat model' 
       link: '/threat-model'

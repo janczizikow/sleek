@@ -1,6 +1,10 @@
 ---
 layout: compress
 ---
+
+{% assign url = page.url | split: "/" %}
+{% assign category = url[1] %}
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
 
@@ -31,9 +35,24 @@ layout: compress
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-            {% for post in site.posts %}
-              {% include card.html %}
-            {% endfor %}
+            {% if category == 'tech' %}
+              {% for post in site.posts %}
+                {% if post.categories contains 'Tech' %}
+                  {% include card.html %}
+                {% endif %}
+              {% endfor %}
+            {% elsif category == 'donjon' %}
+              {% for post in site.posts %}
+                {% if post.categories contains 'Donjon' %}
+                  {% include card.html %}
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              {% for post in site.posts %}
+                  {% include card.html %}
+              {% endfor %}
+            {% endif %}
+
 
             <!-- {% include pagination.html %} -->
           </div>
