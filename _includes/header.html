@@ -18,7 +18,7 @@
               <div uk-dropdown>
                 <ul class="uk-nav uk-navbar-dropdown-nav">
                   {% for subitem in item.dropdown %}
-                    <li><a href="{{ domain }}{{ subitem.link }}">{{ subitem.name }}</a></li>
+                    <li><a href="{{ subitem.link | relative_url }}">{{ subitem.name }}</a></li>
                   {% endfor %}
                 </ul>
               </div>

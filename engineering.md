@@ -1,4 +1,4 @@
 ---
 layout: default
-title: Donjon articles
+title: Tech articles
 ---

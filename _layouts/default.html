@@ -23,21 +23,29 @@ layout: compress
 
     {% include header.html %}
 
+    {% if category == null %}
     <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
       <div class="hero__wrap">
         <h1 class="hero__title">{{ site.title | escape }}</h1>
         <p class="hero__meta">{{ site.tagline }}</p>
       </div>
     </div>
+    {% endif %}
 
     <main class="site__content">
       <section class="blog">
         <div class="container">
           <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
-            {% if category == 'tech' %}
+            {% if category == 'engineering' %}
               {% for post in site.posts %}
                 {% if post.categories contains 'Tech' %}
+                  {% include card.html %}
+                {% endif %}
+              {% endfor %}
+            {% elsif category == 'financial-solutions' %}
+              {% for post in site.posts %}
+                {% if post.categories contains 'Vault' %}
                   {% include card.html %}
                 {% endif %}
               {% endfor %}
